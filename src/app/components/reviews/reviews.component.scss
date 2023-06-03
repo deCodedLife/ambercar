@@ -1,0 +1,36 @@
+iframe {
+  width: 100%;
+  height: 350px;
+
+  @media screen and (max-width: 767px) { height: 200px }
+}
+
+.item {
+  background-color: #242424;
+  overflow: hidden;
+  flex: 1;
+}
+
+#reviews {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+
+  @media screen and (max-width: 767px) { flex-direction: column }
+
+  &::-webkit-scrollbar {
+    height: 0;
+  }
+}
+
+.sidescroll {
+  width: 100%;
+  height: 20px;
+  overflow: hidden;
+  mat-icon { padding: 10px; }
+}
+
+.progressbar {
+  height: inherit;
+  background-color: var(--accentColor);
+}

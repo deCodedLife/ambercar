@@ -1,0 +1,83 @@
+<div
+  id="body"
+  class="flex"
+  style="gap: 10px"
+  [ngClass]="{
+    'wrapped': isWrapped
+  }"
+>
+
+  <div style="flex: 1">
+    <p class="placeholder" *ngIf="placeholder"> {{ placeholder }} </p>
+    <div style="gap: 10px" class="flex">
+      <mat-form-field id="form" appearance="fill" class="w-full">
+        <mat-date-range-input
+          [rangePicker]="$any(picker)"
+          [formGroup]="value"
+          [min]="minDate"
+        >
+          <input
+            matStartDate
+            [placeholder]="'all.dateFormat' | translate"
+            [style.text-align]="'center'"
+            formControlName="start"
+          >
+          <input
+            matEndDate
+            [placeholder]="'all.dateFormat' | translate"
+            [style.text-align]="'center'"
+            formControlName="end"
+            (ngModelChange)="emitChanges()"
+          >
+        </mat-date-range-input>
+        <mat-datepicker-toggle matSuffix [for]="$any(picker)"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div id="time-picker" class="flex" style="gap: 10px">
+    <div>
+      <p class="placeholder" *ngIf="placeholder"> {{ 'all.from' | translate }} </p>
+      <div style="display: flex; gap: 10px">
+        <input
+          class="num-input"
+          type="number"
+          placeholder="12"
+          [(ngModel)]="from.hours"
+          (change)="emitChanges()"
+        >
+        <input
+          class="num-input"
+          type="number"
+          placeholder="00"
+          [(ngModel)]="from.minutes"
+          (change)="emitChanges()"
+        >
+      </div>
+    </div>
+
+
+    <div>
+      <p class="placeholder" *ngIf="placeholder"> {{ 'all.till' | translate }} </p>
+      <div style="display: flex; gap: 10px">
+        <input
+          class="num-input"
+          type="number"
+          placeholder="12"
+          [(ngModel)]="till.hours"
+          (change)="emitChanges()"
+        >
+        <input
+          class="num-input"
+          type="number"
+          placeholder="00"
+          [(ngModel)]="till.minutes"
+          (change)="emitChanges()"
+        >
+      </div>
+    </div>
+
+
+  </div>
+</div>

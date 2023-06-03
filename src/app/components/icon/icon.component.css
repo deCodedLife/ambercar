@@ -1,0 +1,33 @@
+p, h1, h2, h3, h4, h5, a {
+  margin: 0;
+  padding: 0;
+  color: white !important;
+}
+
+div {
+  width: 55px;
+  height: 55px;
+  background-color: var(--accentColor);
+  border-radius: 5px;
+  display: grid;
+  cursor: pointer;
+  color: white !important;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  div {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.flat {
+  all: unset;
+}
+
+.rounded {
+  border-radius: 50%;
+}
+
+/*# sourceMappingURL=icon.component.css.map */

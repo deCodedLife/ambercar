@@ -1,0 +1,45 @@
+iframe {
+  width: 100%;
+  height: 350px;
+}
+@media screen and (max-width: 767px) {
+  iframe {
+    height: 200px;
+  }
+}
+
+.item {
+  background-color: #242424;
+  overflow: hidden;
+  flex: 1;
+}
+
+#reviews {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+}
+@media screen and (max-width: 767px) {
+  #reviews {
+    flex-direction: column;
+  }
+}
+#reviews::-webkit-scrollbar {
+  height: 0;
+}
+
+.sidescroll {
+  width: 100%;
+  height: 20px;
+  overflow: hidden;
+}
+.sidescroll mat-icon {
+  padding: 10px;
+}
+
+.progressbar {
+  height: inherit;
+  background-color: var(--accentColor);
+}
+
+/*# sourceMappingURL=reviews.component.css.map */

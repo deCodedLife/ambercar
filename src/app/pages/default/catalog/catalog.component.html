@@ -1,0 +1,28 @@
+<div id="catalog">
+  <div style="padding: 25px 0">
+    <div
+      style="margin-bottom: 40px; gap: 10px"
+      class="container flex">
+      <a style="text-decoration: none" routerLink="/"> {{ 'all.home' | translate }} </a>
+      <p> {{ 'header.carRental' | translate }} </p>
+    </div>
+    <div
+      id="info"
+      class="container flex space-between items-center">
+      <h1> {{ 'catalog.title' | translate }} </h1>
+      <app-styled-text
+        content="catalog.description"
+      ></app-styled-text>
+    </div>
+  </div>
+  <app-filters
+    (onFiltersChanged)="applyFilters( $event )"
+  ></app-filters>
+    <div id="product-container" class="container">
+      <app-product
+        *ngFor="let product of filteredList"
+        [ngClass]=" filteredList.length < 3 ? 'fit' : '' "
+        [productDetails]="product"
+      ></app-product>
+    </div>
+</div>

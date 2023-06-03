@@ -1,0 +1,11 @@
+<div id="form">
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="updatePage()"
+  > Сохранить </button>
+  <app-custom-page
+    [currentPage]="currentPage"
+    (edited)="currentPage = $event"
+  ></app-custom-page>
+</div>

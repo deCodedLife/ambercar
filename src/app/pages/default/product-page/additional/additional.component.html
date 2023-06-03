@@ -1,0 +1,29 @@
+<mat-label
+  *ngIf="title"
+> {{ title | translate }} </mat-label>
+<h5
+  *ngIf="description"
+  style="color: var(--accentColor)"
+> {{ description | translate }} </h5>
+<mat-radio-group
+  *ngIf="type == RADIO_GROUP"
+  class="flex"
+  style="flex-direction: column"
+>
+  <mat-radio-button
+    *ngFor=" let item of items; index as i"
+    (click)="selectRadio(i)"
+  > {{ item }} </mat-radio-button>
+</mat-radio-group>
+<div
+  *ngIf="type == CHECKBOX || type == CHECKBOX_GROUP"
+  class="grid sharp"
+  [ngClass]="{
+    'straight': type != CHECKBOX_GROUP
+  }"
+>
+  <mat-checkbox
+    *ngFor=" let item of items; index as i "
+    (change)="selectCheckbox(i, $event.checked)"
+  > {{ item }} </mat-checkbox>
+</div>

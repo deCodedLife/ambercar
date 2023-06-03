@@ -1,0 +1,9 @@
+#add-page {
+  display: grid;
+  gap: 10px;
+}
+#add-page button {
+  width: min-content;
+}
+
+/*# sourceMappingURL=add-page.component.css.map */

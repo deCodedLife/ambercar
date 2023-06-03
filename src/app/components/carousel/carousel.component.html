@@ -1,0 +1,26 @@
+<div
+  #carousel
+  id="carousel"
+>
+  <div
+    id="view-box"
+    class="item"
+  >
+    <div *ngIf="items.length > 1" class="flex space-between items-center">
+      <div
+        class="button left"
+        (click)="selectedItem = selectedItem - 1; spawnImage(previousAnimation)"
+      >
+        <mat-icon>arrow_back_ios_new</mat-icon>
+      </div>
+      <div
+        class="button right"
+        (click)="selectedItem = selectedItem + 1; spawnImage(nextAnimation)"
+      >
+        <mat-icon>arrow_forward_ios_new</mat-icon>
+      </div>
+    </div>
+
+
+  </div>
+</div>

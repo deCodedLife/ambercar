@@ -1,0 +1,22 @@
+<div id="combobox">
+  <p id="placeholder" *ngIf="placeholder"> {{ placeholder }} </p>
+  <div
+    id="body"
+    class="combobox-body"
+    [ngClass]="{
+      'flat': isFlat
+    }"
+  >
+    <input
+      id="inputBox" [(ngModel)]="value" (ngModelChange)="filter()" [readOnly]="!isEditable" (click)="isVisible = false">
+    <span
+      [style.text-align]="'left'"
+      class="hidden-container absolute left-0 w-full rounded p-2 z-10"
+      [ngClass]="{
+          'visible': isVisible
+      }"
+    >
+      <input *ngFor="let item of filteredList; index as i" [value]="item" (click)="update(item, i)" readonly>
+    </span>
+  </div>
+</div>

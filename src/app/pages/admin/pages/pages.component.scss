@@ -1,0 +1,24 @@
+#pages {
+  gap: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+
+  .mdc-button {
+    justify-content: left !important;
+  }
+
+  button {
+    text-align: left;
+    padding-left: 15px;
+  }
+}
+
+#page-body {
+  display: grid;
+  gap: 10px;
+
+  button {
+    width: min-content;
+  }
+}

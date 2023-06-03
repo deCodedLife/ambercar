@@ -1,0 +1,23 @@
+#pages {
+  gap: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+#pages .mdc-button {
+  justify-content: left !important;
+}
+#pages button {
+  text-align: left;
+  padding-left: 15px;
+}
+
+#page-body {
+  display: grid;
+  gap: 10px;
+}
+#page-body button {
+  width: min-content;
+}
+
+/*# sourceMappingURL=pages.component.css.map */

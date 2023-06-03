@@ -1,0 +1,12 @@
+<div id="combobox">
+  <p
+    id="placeholder"
+    *ngIf="placeholder != null"
+    [ngClass]="{
+      'required': required
+    }"
+  > {{ placeholder }} </p>
+  <mat-form-field>
+    <input [(ngModel)]="content" (ngModelChange)="emit()" matInput [type]="getType()" [value]="content">
+  </mat-form-field>
+</div>

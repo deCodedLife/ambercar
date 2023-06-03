@@ -1,0 +1,30 @@
+<div id="reviews">
+  <div
+    class="item rounded"
+    *ngFor="let item of list; index as i"
+    [style.display]="isCurrent( i + 1 )"
+  >
+    <div class="review-container">
+      <iframe [src]="secureURL( i )" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div style="padding: 15px">
+      <h2 style="margin: 0; color: var(--accentColor)"> {{ item.username }} </h2>
+      <p style="margin: 0"> {{ item.author }} </p>
+    </div>
+  </div>
+
+</div>
+
+<br>
+
+<div class="flex items-center" style="gap: 15px">
+  <div class="sidescroll rounded">
+    <div
+      class="progressbar"
+      [style.width]=" currentPage / pagesCount * 100 + '%' "
+    ></div>
+  </div>
+  <mat-icon (click)="backward()">arrow_back_ios</mat-icon>
+  <mat-icon (click)="forward()">arrow_forward_ios</mat-icon>
+</div>
+

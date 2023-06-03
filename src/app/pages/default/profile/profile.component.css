@@ -1,0 +1,56 @@
+p, h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  color: white;
+}
+
+.head-container {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.custom-container {
+  padding: 30px;
+}
+@media screen and (max-width: 800px) {
+  .custom-container {
+    padding: 15px;
+  }
+}
+
+.border {
+  border-right: 1px solid rgba(255, 255, 255, 0.42);
+}
+@media screen and (max-width: 767px) {
+  .border {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #profile-header div {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #leaveButton {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .rounded {
+    borde-right: 0;
+  }
+}
+
+/*# sourceMappingURL=profile.component.css.map */

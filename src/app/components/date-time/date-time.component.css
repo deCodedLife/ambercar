@@ -1,0 +1,53 @@
+p, h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.placeholder {
+  margin: 10px 0;
+  color: #8f8f8f;
+}
+
+.num-input {
+  all: unset;
+  max-width: 60px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #343434;
+  height: 60px;
+  font-weight: 500;
+}
+.num-input:focus-within {
+  background-color: #191919;
+}
+.num-input::-webkit-inner-spin-button, .num-input ::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+@media screen and (max-width: 340px) {
+  .num-input #form {
+    max-width: 150px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #body {
+    display: block;
+  }
+  #body #time-picker {
+    justify-content: space-between;
+  }
+  #body #time-picker input {
+    min-width: 20%;
+  }
+}
+
+.wrapped {
+  display: block;
+}
+.wrapped #time-picker {
+  justify-content: space-between;
+}
+
+/*# sourceMappingURL=date-time.component.css.map */

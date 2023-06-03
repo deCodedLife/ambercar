@@ -1,0 +1,76 @@
+<div style="margin-top: 90px">
+
+  <div class="container head-container">
+    <div
+      style="margin-bottom: 40px; gap: 10px"
+      class="flex">
+      <a style="text-decoration: none" routerLink="/"> {{ 'all.home' | translate }} </a>
+      <p> {{ 'profile.path' | translate }} </p>
+    </div>
+    <h1> {{ 'profile.title' | translate }} </h1>
+  </div>
+
+  <div class="container">
+    <div id="profile-header" class="background rounded flex space-between items-center custom-container">
+      <div class="flex" style="gap: 30px">
+        <app-button
+          icon="person"
+          [highlighted]="currentTab == 0"
+          [title]=" 'profile.mainInfo' | translate "
+          (click)="currentTab = 0"
+        ></app-button>
+        <div class="border"></div>
+        <app-button
+          icon="verified_user"
+          [highlighted]="currentTab == 1"
+          [title]=" 'profile.security' | translate "
+          (click)="currentTab = 1"
+        ></app-button>
+        <div class="border"></div>
+        <app-button
+          icon="menu_book"
+          [highlighted]="currentTab == 2"
+          [title]=" 'profile.history' | translate "
+          (click)="currentTab = 2"
+        ></app-button>
+      </div>
+      <app-button
+        id="leaveButton"
+        [highlighted]="true"
+        [title]=" 'profile.leave' | translate "
+        (click)="currentTab = currentTab + 1"
+      ></app-button>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="container">
+    <mat-tab-group [(selectedIndex)]="currentTab" #tabs animationDuration="0ms">
+      <mat-tab>
+        <div class="custom-container background rounded">
+          <p class="h3"> {{ ('profile.greetings' | translate) + ' ' + user.name + '!' }} </p>
+          <p class="h5"> {{ ('profile.nextLevelSumPre' | translate) + ' ' + 1 + ('profile.nextLevelSumPos' | translate) }} </p>
+          <br>
+          <p class="h4>"> {{ 'profile.person' | translate }} </p>
+          <app-user-data [user]="user"></app-user-data>
+          <button
+            mat-raised-button
+            color="primary"
+            style="height: 60px"
+            class="h4"
+          > {{ 'user.save' | translate }} </button>
+        </div>
+      </mat-tab>
+      <mat-tab>
+        <app-security [user]="user"></app-security>
+      </mat-tab>
+      <mat-tab>
+        <app-history [user]="user"></app-history>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+
+  <br>
+
+</div>

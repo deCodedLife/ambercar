@@ -1,0 +1,77 @@
+<div class="main-grid">
+
+  <app-input
+    [required]="useRequired"
+    [content]="user.company"
+    [placeholder]=" 'profile.companyName' | translate "
+  ></app-input>
+  <app-input
+    [required]="useRequired"
+    [content]="user.regnr"
+    [placeholder]=" 'profile.regNumber' | translate "
+  ></app-input>
+  <app-input
+    [required]="useRequired"
+    [content]="user.adress2"
+    [placeholder]=" 'profile.companyAddress' | translate "
+  ></app-input>
+
+  <app-input
+    [required]="useRequired"
+    [content]="user.tel2"
+    [placeholder]=" 'user.phoneNumber' | translate "
+  ></app-input>
+  <app-input
+    [content]="user.adress3"
+    [placeholder]=" 'profile.companyRealAddress' | translate "
+  ></app-input>
+  <app-input
+    [content]="user.vatnr"
+    [placeholder]=" 'profile.bank' | translate "
+  ></app-input>
+  <app-input
+    [content]="user.name"
+    [placeholder]=" 'profile.iBan' | translate "
+  ></app-input>
+  <app-input
+    [content]="user.name"
+    [placeholder]=" 'profile.swift' | translate "
+  ></app-input>
+
+</div>
+<div class="hr" style="padding: 15px"></div>
+
+<div class="main-grid">
+
+  <app-input
+    [required]="useRequired"
+    [content]="user.name"
+    [placeholder]=" 'user.name' | translate "
+  ></app-input>
+  <app-input
+    [required]="useRequired"
+    [content]="user.surname"
+    [placeholder]=" 'user.surname' | translate "
+  ></app-input>
+  <app-input
+    [required]="useRequired"
+    [content]="user.tel"
+    [placeholder]=" 'user.phoneNumber' | translate "
+  ></app-input>
+  <app-input
+    style="flex: 1"
+    [content]="user.field1"
+    [placeholder]=" 'user.driverLicence' | translate "
+  ></app-input>
+  <app-input
+    [content]="user.field2"
+    [placeholder]=" 'user.passport' | translate "
+  ></app-input>
+  <app-input
+    [required]="useRequired"
+    [content]="user.email"
+    [placeholder]=" 'user.email' | translate "
+  ></app-input>
+
+
+</div>

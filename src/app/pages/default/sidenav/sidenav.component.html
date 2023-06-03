@@ -1,0 +1,20 @@
+<div id="sidenav-body">
+
+  <div id="close-container">
+    <mat-icon (click)="close()">close</mat-icon>
+  </div>
+
+  <div
+    class="content"
+    *ngIf="sidenavType == MainType"
+  >
+    <app-sidenav-main></app-sidenav-main>
+  </div>
+
+  <div
+    class="content"
+    *ngIf="sidenavType != MainType"
+  >
+    <app-sidenav-filters></app-sidenav-filters>
+  </div>
+</div>

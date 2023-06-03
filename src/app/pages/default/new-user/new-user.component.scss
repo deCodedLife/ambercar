@@ -1,0 +1,64 @@
+p, h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  color: white;
+}
+
+#auth-body {
+
+  .flex {
+    gap: 30px;
+  }
+
+  padding-top: 120px;
+  padding-bottom: 30px;
+
+  @media screen and (max-width: 767px) { padding-top: 90px; }
+  @media screen and (max-width: 400px) { padding-left: 0; padding-right: 0; }
+}
+
+.rounded { @media screen and (max-width: 400px) { border-radius: 0 !important; } }
+
+#form {
+  padding: 30px;
+  display: grid;
+  gap: 30px;
+  min-width: 500px;
+
+  @media screen and (max-width: 767px) {
+    min-width: 0;
+    width: 500px;
+    max-width: 500px;
+  }
+}
+
+#auth-image-container {
+  @media screen and (max-width: 1024px) { display: none; flex: 0 }
+}
+
+.image {
+  background-image: url(/assets/pic-1.jpg);
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.6);
+  flex: 1;
+}
+
+.main-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  @media screen and (max-width: 767px) { grid-template-columns: 1fr }
+}
+.custom-container {
+  padding: 30px;
+  @media screen and (max-width: 800px) { padding: 15px }
+}
+
+.main-info {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  @media screen and (max-width: 767px) { grid-template-columns: 1fr }
+}

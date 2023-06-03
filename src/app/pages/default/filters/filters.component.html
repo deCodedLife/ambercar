@@ -1,0 +1,92 @@
+<div id="filters">
+  <div class="container">
+    <div
+      id="container"
+      style="border-bottom: 1px solid #343434"
+      class="w-full"
+    >
+      <div id="places" class="flex" style="gap: 10px">
+        <app-combobox
+          [placeholder]=" 'filters.receivePlace' | translate "
+          [value]=" 'filters.addressSelection' | translate "
+          [objectsList]=" 'filters.receivePlaces' | translate "
+          (itemSelected)="currentSettings.receivePlace = $event; currentSettings.dateUpdated = true; emitChanges()"
+        ></app-combobox>
+        <app-combobox
+          [value]="'filters.addressSelection' | translate"
+          [objectsList]=" 'filters.returnPlaces' | translate "
+          [placeholder]=" 'filters.returnPlace' | translate "
+          (itemSelected)="currentSettings.returnPlace = $event; currentSettings.dateUpdated = true; emitChanges()"
+        ></app-combobox>
+      </div>
+      <app-date-time
+        [placeholder]=" 'filters.receiveDateTime' | translate "
+        (dateChanged)="dateChanged( $event ); currentSettings.dateUpdated = true; emitChanges()"
+      ></app-date-time>
+    </div>
+  </div>
+  <div class="container">
+    <div
+      class="flex w-full space-between items-center"
+      [style.margin-top]="'15px'"
+    >
+
+      <div
+        id="additional-filters"
+        [style.gap]="'10px'"
+        class="flex space-between"
+      >
+        <app-combobox
+          [isFlat]="true"
+          [value]=" 'filters.class' | translate "
+          [objectsList]=" 'filters.classOptions' | translate "
+          (indexSelected)="currentSettings.modelIndex = $event; emitChanges()"
+        ></app-combobox>
+        <app-combobox
+          [isFlat]="true"
+          [value]=" 'filters.brand' | translate "
+          [objectsList]=" 'filters.brandOptions' | translate "
+          (itemSelected)="currentSettings.brand = $event; emitChanges()"
+        ></app-combobox>
+
+        <app-range-dropdown
+          [placeholder]=" 'filters.price' | translate "
+          (maxChanged)="currentSettings.priceTo = $event; emitChanges()"
+          (minChanged)="currentSettings.priceFrom = $event; emitChanges()"
+        ></app-range-dropdown>
+
+        <app-combobox
+          [isFlat]="true"
+          [value]=" 'filters.color' | translate "
+          [objectsList]=" 'filters.colorOptions' | translate "
+          (indexSelected)="currentSettings.colorIndex = $event; emitChanges()"
+        ></app-combobox>
+        <app-combobox
+          [isFlat]="true"
+          [value]=" 'filters.passengers' | translate "
+          [objectsList]=" ['1','2','3','4','5','6','7','8','9'] "
+          (indexSelected)="currentSettings.passengersCount = ($event + 1); emitChanges()"
+        ></app-combobox>
+      </div>
+
+
+      <app-combobox
+        id="sort"
+        [isFlat]="true"
+        [placeholder]="null"
+        [value]=" 'filters.sorting' | translate "
+        [objectsList]=" 'filters.sortingOptions' | translate "
+        (indexSelected)="setSortType( $event )"
+      ></app-combobox>
+
+      <app-icon
+        id="show-filters"
+        tag="tune"
+        (click)="openDialog()"
+      ></app-icon>
+
+
+
+    </div>
+  </div>
+</div>

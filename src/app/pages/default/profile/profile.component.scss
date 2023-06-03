@@ -1,0 +1,40 @@
+p, h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  color: white;
+}
+
+.head-container {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.custom-container {
+  padding: 30px;
+  @media screen and (max-width: 800px) { padding: 15px }
+}
+
+.border {
+  border-right: 1px solid rgba(255, 255, 255, 0.42);
+  @media screen and (max-width: 767px) { display: none }
+}
+
+#profile-header {
+  @media screen and (max-width: 767px) {
+    div {
+      flex-wrap: wrap
+    }
+  }
+}
+
+#leaveButton {
+  @media screen and (max-width: 800px) { display: none }
+}
+
+.container {
+  @media screen and (max-width: 400px){ padding-left: 0; padding-right: 0 }
+}
+.rounded {
+  @media screen and (max-width: 400px){ borde-right: 0; }
+}

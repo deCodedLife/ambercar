@@ -1,0 +1,14 @@
+<div id="shell">
+  <div id="product">
+    <img class="rounded" [src]="'https://img.schedulebull.com/' + productDetails.mainImage + '&x=300&y=250'" alt="car">
+    <app-button
+      class="h2"
+      [link]="'/product/' + (isForSale ? 'ransom' : 'rent') + '/' + productDetails.id"
+      [title]="productDetails.brand + ' ' + productDetails.model"
+    ></app-button>
+    <p class="bold"> {{ isForSale ?
+      ( 'catalog.pricingFrom' | translate ) + productDetails.priceMonth.toString() + ( 'catalog.perMonth' | translate ) :
+      ( 'catalog.pricingFrom' | translate ) + productDetails.rentPrice.toString() + ( 'catalog.pricingPer' | translate )
+      }} </p>
+  </div>
+</div>

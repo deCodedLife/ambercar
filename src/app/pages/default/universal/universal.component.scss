@@ -1,0 +1,21 @@
+#body {
+  margin-top: 120px;
+
+  @media screen and (max-width: 767px) { margin-top: 100px }
+  @media screen and (max-width: 767px) { margin-top: 90px }
+}
+
+#container {
+  padding: 15px;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+#content {
+  img {
+    max-width: 100%;
+  }
+}

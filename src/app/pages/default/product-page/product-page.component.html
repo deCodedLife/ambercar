@@ -1,0 +1,249 @@
+<div
+  id="product"
+>
+  <div
+    style="padding: 25px 0;"
+  >
+    <div
+      style="margin-bottom: 40px; gap: 10px; justify-content: left "
+      class="container flex ad">
+      <a routerLink="/" style="text-decoration: none;"> {{ 'all.home' | translate }} </a>
+      <p> {{ 'header.carRental' | translate }} </p>
+    </div>
+
+    <div
+      *ngIf="productDetails"
+      class="container flex space-between items-center ad">
+      <h1> {{ productDetails.brand + ' ' + productDetails.model }} </h1>
+    </div>
+
+    <div
+      id="body"
+      *ngIf="productDetails"
+      class="container"
+    >
+      <div
+        id="rent"
+      >
+        <div>
+            <app-carousel
+              [items]="carouselItems"
+            ></app-carousel>
+            <div
+              *ngIf="!isForSale"
+              class="filters"
+            >
+              <div class="places">
+                <app-combobox
+                  [placeholder]=" 'filters.receivePlace' | translate "
+                  [value]=" 'filters.addressSelection' | translate "
+                  [objectsList]=" 'filters.receivePlaces' | translate "
+                  (indexSelected)="placeFrom = places[$event]"
+                ></app-combobox>
+                <app-combobox
+                  [value]="'filters.addressSelection' | translate"
+                  [objectsList]=" 'filters.returnPlaces' | translate "
+                  [placeholder]=" 'filters.returnPlace' | translate "
+                  (indexSelected)="placeTo = places[$event]"
+                ></app-combobox>
+              </div>
+              <app-date-time
+                [placeholder]=" 'filters.receiveDateTime' | translate "
+                (dateChanged)="changeDate( $event )"
+              ></app-date-time>
+            </div>
+          <div>
+              <mat-stepper orientation="vertical" #stepper [selectedIndex]="0">
+                <mat-step *ngIf="!isForSale">
+                  <ng-template matStepLabel> {{ 'product.movement' | translate }} </ng-template>
+                  <div class="stepper-body">
+                    <app-additional
+                      title="product.mileage"
+                      [items]="'product.mileageOptions' | translate"
+                      (selected)="millageSelected = $event; calculatePrice()"
+                    ></app-additional>
+                    <app-additional
+                      title="product.leave"
+                      [items]="'product.leaveOptions' | translate"
+                      (selected)="willLeaveCountry = $event; calculatePrice()"
+                    ></app-additional>
+                    <div class="buttons-area">
+                      <button mat-flat-button color="primary" matStepperNext> {{ 'all.next' | translate }} </button>
+                    </div>
+                  </div>
+                </mat-step>
+
+                <mat-step *ngIf="!isForSale">
+                  <ng-template matStepLabel> {{ 'product.insurance' | translate }} </ng-template>
+                  <div class="stepper-body">
+                    <app-additional
+                      title="product.addInsurance"
+                      [type]="CHECKBOX"
+                      description="product.insuranceLabel"
+                      [items]="'product.insuranceOptions' | translate"
+                      (selected)="insurance = $event; calculatePrice()"
+                    ></app-additional>
+                    <div class="buttons-area">
+                      <button mat-flat-button color="primary" matStepperNext> {{ 'all.next' | translate }} </button>
+                      <button mat-flat-button matStepperPrevious> {{ 'all.back' | translate }} </button>
+                    </div>
+                  </div>
+                </mat-step>
+
+                <mat-step *ngIf="!isForSale">
+                  <ng-template matStepLabel> {{ 'product.equipment' | translate }} </ng-template>
+                  <div class="stepper-body">
+
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title> {{ 'product.childSeats' | translate }} </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <app-additional
+                        [items]="'product.childSeatsOptions' | translate"
+                        (selected)="childSeats = $event; calculatePrice()"
+                      ></app-additional>
+                    </mat-expansion-panel>
+
+                    <app-additional
+                      [type]="CHECKBOX_GROUP"
+                      description="product.equipmentLabel"
+                      [items]="'product.equipmentOptions' | translate"
+                      (selected)="tools = $event; calculatePrice()"
+                    ></app-additional>
+                    <div class="buttons-area">
+                      <button mat-flat-button color="primary" matStepperNext> {{ 'all.next' | translate }} </button>
+                      <button mat-flat-button matStepperPrevious> {{ 'all.back' | translate }} </button>
+                    </div>
+                  </div>
+                </mat-step>
+
+                <mat-step *ngIf="currentUser == null">
+                  <ng-template matStepLabel> {{ 'product.isRegistered' | translate }} </ng-template>
+                  <div class="stepper-body">
+                    <div>
+                      <button mat-button (click)="isEntityIndex = 0" >
+                        <mat-icon [style.color]=" isEntityIndex ? 'white' : 'var(--accentColor)' ">person</mat-icon>
+                        {{ 'profile.person' | translate }}
+                      </button>
+                      <button mat-button (click)="isEntityIndex = 1">
+                        <mat-icon [style.color]=" isEntityIndex ? 'var(--accentColor)' : 'white' ">corporate_fare</mat-icon>
+                        {{ 'profile.business' | translate }}
+                      </button>
+                    </div>
+                    <mat-tab-group [(selectedIndex)]="isEntityIndex" animationDuration="0ms">
+                      <mat-tab>
+                        <app-user-data [useRequired]="true" [isCollapsed]="true"></app-user-data>
+                      </mat-tab>
+                      <mat-tab>
+                        <app-organization [useRequired]="true"></app-organization>
+                      </mat-tab>
+                    </mat-tab-group>
+                    <br>
+                    <div class="buttons-area">
+                      <button mat-flat-button color="primary" matStepperNext> {{ 'all.next' | translate }} </button>
+                      <button mat-flat-button matStepperPrevious> {{ 'all.back' | translate }} </button>
+                    </div>
+                  </div>
+                </mat-step>
+
+
+                <mat-step>
+                  <ng-template matStepLabel> {{ 'product.rentType' | translate }} </ng-template>
+                  <div class="stepper-body">
+
+                    <mat-radio-group class="flex" style="flex-direction: column" *ngIf="!isForSale">
+                      <mat-radio-button (click)="toogleReservationType(false)">
+                        {{ 'product.reservation' | translate }}
+                      </mat-radio-button>
+                      <h5 style="color: var(--accentColor)"> {{ 'product.reservationDetails' | translate }} </h5>
+                      <mat-radio-button (click)="toogleReservationType(true)">
+                        {{ 'product.booking' | translate }}
+                      </mat-radio-button>
+                      <h5 style="color: var(--accentColor)"> {{ 'product.bookingDetails' | translate }} </h5>
+                    </mat-radio-group>
+
+                    <mat-checkbox (change)="termsAccepted = $event.checked">
+                      {{ 'product.userAgreement' | translate }}
+                      <a
+                        style="text-decoration: none"
+                        routerLink="/userAgreement"
+                      >
+                        {{ 'product.agreementLink' | translate }}
+                      </a>
+                    </mat-checkbox>
+
+                    <div class="flex all-flex">
+                      <button [disabled]="isValid()" mat-flat-button color="primary" (click)="createReservation()"> {{ (valid || isForSale) ? ('product.submit' | translate) : ('product.unavailable' | translate) }} </button>
+                    </div>
+                  </div>
+                </mat-step>
+              </mat-stepper>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="info"
+      >
+        <div class="flex info">
+          <p [style.color]="'#8f8f8f'"> {{ 'product.fuelConsumption' | translate }} </p>
+          <p> {{ productDetails.fuelType + ' (' + productDetails.fuel_consumption + 'l/100km)' }} </p>
+        </div>
+        <div class="flex info">
+          <p [style.color]="'#8f8f8f'"> {{ 'product.passengersCount' | translate }} </p>
+          <p> {{ productDetails.seats }} </p>
+        </div>
+        <div class="flex info">
+          <p [style.color]="'#8f8f8f'"> {{ 'product.transmission' | translate }} </p>
+          <p> {{ productDetails.transmission }} </p>
+        </div>
+        <div class="flex info">
+          <p [style.color]="'#8f8f8f'"> {{ 'product.doorsCount' | translate }} </p>
+          <p> {{ productDetails.doors }} </p>
+        </div>
+        <div class="flex info">
+          <p [style.color]="'#8f8f8f'"> {{ 'product.hasConditioner' | translate }} </p>
+          <p> {{ productDetails.hasConditioner ? ( 'all.yes' | translate ) : ( 'all.no' | translate ) }} </p>
+        </div>
+        <div class="flex info">
+          <p [style.color]="'#8f8f8f'"> {{ 'product.trunk' | translate }} </p>
+          <p> {{
+            productDetails.capacity[0]  ?? '*' + ' ' + ( 'product.suitcases' | translate ) + ' / ' +
+            (productDetails.capacity[1] ?? '*') + ' ' + ( 'product.bags' | translate ) }} </p>
+        </div>
+
+        <div
+          id="price"
+          class="flex space-between items-center"
+        >
+          <div>
+            <p [style.color]="'#8f8f8f'"> {{ 'product.daySummary' | translate }} </p>
+            <p class="h2"> {{ productDetails.sumPerDay + '€' }} </p>
+          </div>
+          <div>
+            <p [style.color]="'#8f8f8f'"> {{ 'product.periodSummary' | translate }} </p>
+            <p class="h2"> {{ ( isForSale ? this.productDetails.priceMonth : totalPrice ) + '€' }} </p>
+          </div>
+        </div>
+
+        <div class="details">
+          <div class="info">
+            <p> {{ ( 'product.pledge' | translate ) + ' ' + productDetails.pledge }}</p>
+            <p [style.color]="'#8f8f8f'"> {{ 'product.pledgeDetails' | translate }} </p>
+          </div>
+          <div class="info">
+            <p> {{ ( 'product.kasco' | translate ) + ' ' + productDetails.selfrisk }}</p>
+            <p [style.color]="'#8f8f8f'"> {{ 'product.kascoDetails' | translate }} </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div id="mobile-info" *ngIf="productDetails">
+  <div id="info-container">
+    <p class="h3"> {{ (isForSale ? productDetails.priceMonth : totalPrice + '€' ) }} </p>
+    <p> {{ isForSale ? ('catalog.perMonth' | translate) : ('product.periodSummary' | translate) }} </p>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<div id="page" class="background rounded">
+  <app-input
+    placeholder="Ссылка на страницу"
+    [content]="currentPage.uri"
+    (changed)="currentPage.uri = $event; emit()"
+    [required]="true"
+  ></app-input>
+  <div class="flex">
+    <button
+      mat-button
+      [style.color]="currentTab == 0 ? 'var(--accentColor)' : 'white'"
+      (click)="currentTab = 0"
+    > LV </button>
+    <button
+      mat-button
+      [style.color]="currentTab == 1 ? 'var(--accentColor)' : 'white'"
+      (click)="currentTab = 1"
+    > EN </button>
+    <button
+      mat-button
+      [style.color]="currentTab == 2 ? 'var(--accentColor)' : 'white'"
+      (click)="currentTab = 2"
+    > RU </button>
+  </div>
+  <mat-tab-group [(selectedIndex)]="currentTab" #tabs animationDuration="0ms">
+    <mat-tab>
+      <app-rich-editor
+        [data]="currentPage.lv"
+        (edited)="currentPage.lv = $event; emit()"
+      ></app-rich-editor>
+    </mat-tab>
+    <mat-tab>
+      <app-rich-editor
+        [data]="currentPage.us"
+        (edited)="currentPage.us = $event; emit()"
+      ></app-rich-editor>
+    </mat-tab>
+    <mat-tab>
+      <app-rich-editor
+        [data]="currentPage.ru"
+        (edited)="currentPage.ru = $event; emit()"
+      ></app-rich-editor>
+    </mat-tab>
+  </mat-tab-group>
+</div>

@@ -1,0 +1,66 @@
+p, h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+@mixin keyframes ($animation-name) {
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animate($animation,$duration,$times){
+  animation: $animation $duration $times;
+}
+@mixin animateMe($animation,$duration,$times){
+  animation: $animation $duration $times;
+}
+
+@keyframes nextImage {
+  from {
+    left: 120%;
+  }
+  to {
+    left: 0%;
+  }
+}
+
+#carousel {
+  position: relative;
+  display: block;
+  height: inherit;
+  overflow: hidden;
+}
+
+#view-box {
+  position: relative;
+  height: inherit;
+  display: flex;
+
+  img {
+    width: 100%;
+
+    @include animate(nextImage, 2s, infinite);
+  }
+}
+
+.button {
+  z-index: 1;
+  position: absolute;
+
+  padding: 10px;
+  background-color: rgba(0,0,0,0.8);
+  border-radius: 50%;
+  display: flex;
+  cursor: pointer;
+}
+
+.left {
+  left: 10px;
+}
+
+.right {
+  float: right;
+  right: 10px;
+}

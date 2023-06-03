@@ -1,0 +1,21 @@
+<div id="page-body">
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="router.navigate([ 'admin/newPage' ] )"
+  >
+    <mat-icon>add</mat-icon>
+    Добавить
+  </button>
+  <div id="pages" class="background rounded">
+    <button
+      *ngFor=" let page of pages.pagesList"
+      mat-button
+      class="h4"
+      (click)="router.navigate( [ 'admin/page/' + page.id ] )"
+    >
+      <mat-icon>edit_document</mat-icon>
+      {{ page.uri }}
+    </button>
+  </div>
+</div>

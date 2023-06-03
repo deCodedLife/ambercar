@@ -1,0 +1,64 @@
+<div>
+  <h2> {{ 'filters.title' | translate }} </h2>
+</div>
+
+<div
+  id="body"
+>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title> {{ 'filters.price' | translate }} </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-slider style="flex: 1" [min]="0" [max]="100" step="1" discrete [displayWith]="formatLabel">
+      <input [value]="0" matSliderStartThumb (valueChange)="currentSettings.priceFrom = $event; emit()">
+      <input [value]="100" matSliderEndThumb (valueChange)="currentSettings.priceTo = $event; emit()">
+    </mat-slider>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title> {{ 'filters.class' | translate }} </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-radio-group class="flex" style="flex-direction: column">
+      <mat-radio-button
+        *ngFor=" let item of ( 'filters.classOptions' | translate ); index as i"
+      > {{ item }} </mat-radio-button>
+    </mat-radio-group>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title> {{ 'filters.brand' | translate }} </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-radio-group class="flex" style="flex-direction: column" >
+      <mat-radio-button
+        *ngFor=" let item of ( 'filters.brandOptions' | translate )"
+        (click)="currentSettings.brand = item; emit()"
+      > {{ item }} </mat-radio-button>
+    </mat-radio-group>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title> {{ 'filters.color' | translate }} </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-radio-group class="flex" style="flex-direction: column">
+      <mat-radio-button
+        *ngFor=" let item of ( 'filters.colorOptions' | translate ); index as i"
+        (click)="currentSettings.colorIndex = i; emit()"
+      > {{ item }} </mat-radio-button>
+    </mat-radio-group>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title> {{ 'filters.passengers' | translate }} </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-radio-group class="flex" style="flex-direction: column">
+      <mat-radio-button
+        *ngFor=" let item of [1,2,3,4,5,6,7,8,9]; index as i"
+        (click)="currentSettings.passengersCount = i; emit()"
+      > {{ item }} </mat-radio-button>
+    </mat-radio-group>
+  </mat-expansion-panel>
+</div>

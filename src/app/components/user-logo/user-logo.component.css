@@ -1,0 +1,26 @@
+p, h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+#logo {
+  width: 64px;
+  height: 64px;
+  background-color: var(--accentColor);
+  border-radius: 50%;
+}
+@media screen and (max-width: 1024px) {
+  #logo {
+    width: 55px;
+    height: 55px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #logo {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/*# sourceMappingURL=user-logo.component.css.map */

@@ -1,0 +1,29 @@
+:host ::ng-deep .ck-editor__editable_inline {
+  min-height: 500px;
+  background-color: #343434;
+}
+
+.ck-content code {
+  background-color: #343434;
+  padding: .15em;
+  border-radius: 2px;
+}
+
+.ck-content {
+  --ck-color-image-caption-background: #343434 !important;
+  --ck-color-image-caption-text: hsl(0, 0%, 20%);
+  --ck-color-mention-background:  #343434 !important;
+  --ck-color-mention-text: hsl(341, 100%, 30%);
+  --ck-color-table-caption-background:  #343434 !important;
+  --ck-color-table-caption-text: hsl(0, 0%, 20%);
+  --ck-highlight-marker-blue: hsl(201, 97%, 72%);
+  --ck-highlight-marker-green: hsl(120, 93%, 68%);
+  --ck-highlight-marker-pink: hsl(345, 96%, 73%);
+  --ck-highlight-marker-yellow: hsl(60, 97%, 73%);
+  --ck-highlight-pen-green: hsl(112, 100%, 27%);
+  --ck-highlight-pen-red: hsl(0, 85%, 49%);
+  --ck-image-style-spacing: 1.5em;
+  --ck-inline-image-style-spacing: calc(var(--ck-image-style-spacing) / 2);
+  --ck-todo-list-checkmark-size: 16px;
+}
+

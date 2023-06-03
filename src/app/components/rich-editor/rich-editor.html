@@ -1,0 +1,6 @@
+<ckeditor
+  class="editor"
+  [(ngModel)]="data"
+  (ngModelChange)="edited.emit( data )"
+  [editor]="$any(Editor)"
+></ckeditor>

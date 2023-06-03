@@ -1,0 +1,97 @@
+<div class="background custom-container rounded">
+  <p class="h3"> {{ ('profile.greetings' | translate) + ' ' + user.name + '!' }} </p>
+  <p class="h5"> {{ ('profile.nextLevelSumPre' | translate) + ' ' + 1 + ('profile.nextLevelSumPos' | translate) }} </p>
+  <br>
+  <p class="h4>"> {{ 'profile.person' | translate }} </p>
+
+  <div class="main-grid">
+    <app-input
+      [content]="user.name"
+      [placeholder]=" 'user.name' | translate "
+    ></app-input>
+    <app-input
+      [content]="user.surname"
+      [placeholder]=" 'user.surname' | translate "
+    ></app-input>
+    <app-input
+      [content]="user.field2"
+      [placeholder]=" 'user.passport' | translate "
+    ></app-input>
+    <div>
+      <p style="margin: 10px 0; color: #8f8f8f;"> {{ 'user.code' | translate }} </p>
+      <div class="flex justify-center items-center" style="gap: 10px">
+        <app-input
+          style="flex: 1"
+          [content]="user.pk.split('-')[0]"
+        ></app-input>
+        <p class="h2" style="">-</p>
+        <app-input
+          style="flex: 1"
+          [content]="user.pk.split('-')[1]"
+        ></app-input>
+      </div>
+    </div>
+    <app-input
+      [content]="user.adress1"
+      [placeholder]=" 'user.address' | translate "
+    ></app-input>
+    <div class="flex justify-center items-end" style="gap: 30px">
+      <app-input
+        style="flex: 1"
+        [content]="user.city"
+        [placeholder]=" 'user.city' | translate "
+      ></app-input>
+      <app-input
+        style="flex: 1"
+        [content]="user.zip"
+        [placeholder]=" 'user.zip' | translate "
+      ></app-input>
+    </div>
+    <app-input
+      [content]="user.email"
+      [placeholder]=" 'user.email' | translate "
+    ></app-input>
+    <app-input
+      [content]="user.tel"
+      [placeholder]=" 'user.phoneNumber' | translate "
+    ></app-input>
+
+    <div>
+      <div class="flex justify-center items-end" style="gap: 30px">
+        <div style="flex: 1">
+          <p style="margin: 10px 0; color: #8f8f8f;"> {{ 'user.birthDate' | translate }} </p>
+          <mat-form-field style="width: 100%">
+            <input
+              [value]="getBirthDate()"
+              [style.text-align]="'center'"
+              matInput [matDatepicker]="$any(picker)"
+            >
+            <mat-datepicker-toggle matIconSuffix [for]="$any(picker)"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+
+        <app-input
+          style="flex: 1"
+          [content]="user.field3"
+          [placeholder]=" 'user.experience' | translate "
+        ></app-input>
+      </div>
+    </div>
+
+    <app-input
+      style="flex: 1"
+      [content]="user.field1"
+      [placeholder]=" 'user.driverLicence' | translate "
+    ></app-input>
+
+    <button
+      mat-raised-button
+      color="primary"
+      style="height: 60px"
+      class="h4"
+    > {{ 'user.save' | translate }} </button>
+
+
+  </div>
+</div>

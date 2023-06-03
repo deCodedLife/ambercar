@@ -1,0 +1,372 @@
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+@include mat.core();
+
+
+:root {
+  --accentColor: #f35b00;
+  --mat-mdc-button-persistent-ripple-color: transparent;
+  --mat-mdc-button-ripple-color: transparent;
+  --mdc-filled-button-label-text-color: white !important;
+}
+
+$customPalette:  mat.$indigo-palette;
+
+//$customPalette: {
+//  50: #e8eaf6,
+//  100: #c5cae9,
+//  200: #9fa8da,
+//  300: #7986cb,
+//  // ... continues to 900
+//  contrast: (
+//    50: rgba(black, 0.87),
+//    100: rgba(black, 0.87),
+//    200: rgba(black, 0.87),
+//    300: white,
+//    // ... continues to 900
+//  )
+//);
+//map.set( $customPalette, "50", #f35b00 );
+
+$ambercar-primary: mat.define-palette(mat.$orange-palette, 800);
+$ambercar-accent: mat.define-palette(mat.$orange-palette, A200, A100, A400);
+$ambercar-warn: mat.define-palette(mat.$red-palette);
+$ambercar-theme: mat.define-dark-theme((
+  color: (
+    primary: $ambercar-primary,
+    accent: $ambercar-accent,
+    warn: $ambercar-warn,
+    density: -10
+  )
+));
+@include mat.all-component-themes($ambercar-theme);
+
+
+
+
+@font-face {
+  font-family: RobotoS;
+  src: url('assets/fonts/Roboto-Medium.ttf');
+}
+
+* {
+  //margin: 0;
+  //padding: 0;
+  transition: all 0.3s;
+  //font-weight: 400;
+  font-family: "RobotoS", sans-serif;
+  //color: white;
+  line-height: 1.714;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit; }
+
+body {
+  background-color: rgb(52, 52, 52);
+}
+
+*::-webkit-scrollbar {
+  width: 3px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--accentColor);
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #fff;
+  width: 3px;
+}
+
+::selection {
+  background-color: rgba(243, 91, 0, 0.5);
+}
+
+.container {
+  max-width: 1350px;
+  //width: 100%;
+  min-width: 280px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accentColor);
+  cursor: pointer;
+}
+
+.background {
+  background-color: #242424;
+}
+
+.hr { border-bottom: 5px solid #f35b00; height: 5px }
+.grid { display: grid }
+.flex { display: flex }
+.all-flex { * { flex: 1 } }
+.items-center { align-items: center }
+.items-end { align-items: end }
+.justify-center { justify-content: center }
+.space-between { justify-content: space-between }
+.rounded { border-radius: 5px; }
+.w-full { width: 100% }
+
+.text-white { color: white }
+.bold { font-weight: 500; font-size: 18px }
+.h2 { font-size: 28px; }
+.h3 { font-size: 24px; }
+.h4 { font-size: 18px; }
+.h5 { font-size: 14px; }
+h2 { font-size: 36px; }
+h1 {
+  font-size: 52px
+}
+
+@media screen and (max-width: 1380px) {
+  h1 {
+    font-size: calc(32px + 20 * ((100vw - 320px) /1080));
+  }
+  h2 {
+    font-size: calc(24px + 12 * ((100vw - 320px) /1080));
+  }
+  h3 {
+    font-size: calc(24px + 12 * ((100vw - 320px) /1080));
+  }
+  h4 {
+    font-size: calc(18px + 12 * ((100vw - 320px) /1080));
+  }
+  h5 {
+    font-size: calc(14px + 12 * ((100vw - 320px) /1080));
+  }
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mdc-slider__value-indicator-text {
+  color: black !important;
+}
+
+.mdc-text-field--filled {
+  background-color: #343434;
+
+  &:focus-within {
+    background-color: #191919;
+  }
+}
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: #343434;
+  &:focus-within {
+    background-color: #191919;
+  }
+}
+
+.mat-mdc-icon-button svg {
+  display: none;
+}
+
+.mat-mdc-form-field-focus-overlay {
+  background-color: transparent;
+}
+
+.mat-mdc-form-field-icon-suffix {
+  position: absolute;
+  width: 100%;
+}
+
+
+.mat-mdc-icon-button.mat-mdc-button-base {
+  padding: 0;
+  width: 100%;
+}
+
+.mat-mdc-icon-button {
+  --mat-mdc-button-persistent-ripple-color: transparent;
+  --mat-mdc-button-ripple-color: transparent;
+}
+
+.mat-mdc-form-field-has-icon-suffix .mat-mdc-text-field-wrapper {
+  padding: 0;
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before {
+  display: none;
+}
+
+.mat-datepicker-content .mat-calendar {
+  background-color: #191919;
+}
+
+.mdc-text-field--no-label:not(.mdc-text-field--outlined):not(.mdc-text-field--textarea) .mat-mdc-form-field-infix {
+  width: unset;
+}
+.mat-mdc-form-field-infix {
+  width: unset;
+}
+
+.mat-mdc-form-field-subscript-wrapper {
+  display: none;
+}
+
+.mat-expansion-panel-body {
+  display: flex;
+}
+.mat-stepper-horizontal, .mat-stepper-vertical {
+  background-color: #242424;
+}
+
+.mat-date-range-input-wrapper {
+  flex: 1;
+}
+
+.mat-mdc-tab-header {
+  display: none !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+:root {
+  /* Overrides the border radius setting in the theme. */
+  --ck-border-radius: 5px !important;
+  --ck-color-base-background: #343434 !important;
+  --ck-font-size-base: 14px !important;
+  --ck-color-focus-border: transparent !important;
+  --ck-color-base-border: transparent !important;
+
+  --ck-color-base-active: var(--accentColor) !important;
+  --ck-color-button-on-color: var(--accentColor) !important;
+
+  --ck-custom-border: #343434 !important;
+  --ck-color-toolbar-border: var(--ck-custom-border) !important;
+
+  /* Helper variables to avoid duplication in the colors. */
+  --ck-custom-background: #343434 !important;
+  --ck-custom-foreground: #242424 !important;
+
+  --ck-custom-white: hsl(0, 0%, 100%) !important;
+
+  /* -- Overrides generic colors. ------------------------------------------------------------- */
+
+  --ck-color-base-foreground: var(--ck-custom-background) !important;
+
+  --ck-color-text: hsl(0, 0%, 98%) !important;
+  --ck-color-shadow-drop: hsla(0, 0%, 0%, 0.2) !important;
+  --ck-color-shadow-inner: hsla(0, 0%, 0%, 0.1) !important;
+
+  /* -- Overrides the default .ck-button class colors. ---------------------------------------- */
+
+  --ck-color-button-default-background: var(--ck-custom-background) !important;
+  --ck-color-button-default-hover-background: hsl(270, 1%, 22%) !important;
+  --ck-color-button-default-active-background: hsl(270, 2%, 20%) !important;
+  --ck-color-button-default-active-shadow: hsl(270, 2%, 23%) !important;
+  --ck-color-button-default-disabled-background: var(--ck-custom-background) !important;
+
+  --ck-color-button-on-background: var(--ck-custom-foreground) !important;
+  --ck-color-button-on-hover-background: hsl(255, 4%, 16%) !important;
+  --ck-color-button-on-active-background: hsl(255, 4%, 14%) !important;
+  --ck-color-button-on-active-shadow: hsl(240, 3%, 19%) !important;
+  --ck-color-button-on-disabled-background: var(--ck-custom-foreground) !important;
+
+  --ck-color-button-action-background: hsl(168, 76%, 42%) !important;
+  --ck-color-button-action-hover-background: hsl(168, 76%, 38%) !important;
+  --ck-color-button-action-active-background: hsl(168, 76%, 36%) !important;
+  --ck-color-button-action-active-shadow: hsl(168, 75%, 34%) !important;
+  --ck-color-button-action-disabled-background: hsl(168, 76%, 42%) !important;
+  --ck-color-button-action-text: var(--ck-custom-white) !important;
+
+  --ck-color-button-save: hsl(120, 100%, 46%) !important;
+  --ck-color-button-cancel: hsl(15, 100%, 56%) !important;
+
+  /* -- Overrides the default .ck-dropdown class colors. -------------------------------------- */
+
+  --ck-color-dropdown-panel-background: var(--ck-custom-background) !important;
+  --ck-color-dropdown-panel-border: var(--ck-custom-foreground) !important;
+
+  /* -- Overrides the default .ck-splitbutton class colors. ----------------------------------- */
+
+  --ck-color-split-button-hover-background: var(--ck-color-button-default-hover-background) !important;
+  --ck-color-split-button-hover-border: var(--ck-custom-foreground) !important;
+
+  /* -- Overrides the default .ck-input class colors. ----------------------------------------- */
+
+  --ck-color-input-background: var(--ck-custom-background) !important;
+  --ck-color-input-border: hsl(257, 3%, 43%) !important;
+  --ck-color-input-text: hsl(0, 0%, 98%) !important;
+  --ck-color-input-disabled-background: hsl(255, 4%, 21%) !important;
+  --ck-color-input-disabled-border: hsl(250, 3%, 38%) !important;
+  --ck-color-input-disabled-text: hsl(0, 0%, 78%) !important;
+
+  /* -- Overrides the default .ck-labeled-field-view class colors. ---------------------------- */
+
+  --ck-color-labeled-field-label-background: var(--ck-custom-background) !important;
+
+  /* -- Overrides the default .ck-list class colors. ------------------------------------------ */
+
+  --ck-color-list-background: var(--ck-custom-background) !important;
+  --ck-color-list-button-hover-background: var(--ck-color-base-foreground) !important;
+  --ck-color-list-button-on-background: var(--ck-color-base-active) !important;
+  --ck-color-list-button-on-background-focus: var(--ck-color-base-active-focus) !important;
+  --ck-color-list-button-on-text: var(--ck-color-base-background) !important;
+
+  /* -- Overrides the default .ck-balloon-panel class colors. --------------------------------- */
+
+  --ck-color-panel-background: var(--ck-custom-background) !important;
+  --ck-color-panel-border: var(--ck-custom-border) !important;
+
+  /* -- Overrides the default .ck-toolbar class colors. --------------------------------------- */
+
+  --ck-color-toolbar-background: var(--ck-custom-background) !important;
+
+
+  /* -- Overrides the default .ck-tooltip class colors. --------------------------------------- */
+
+  --ck-color-tooltip-background: hsl(252, 7%, 14%) !important;
+  --ck-color-tooltip-text: hsl(0, 0%, 93%) !important;
+
+  /* -- Overrides the default colors used by the ckeditor5-image package. --------------------- */
+
+  --ck-color-image-caption-background: hsl(0, 0%, 97%) !important;
+  --ck-color-image-caption-text: hsl(0, 0%, 20%) !important;
+
+  /* -- Overrides the default colors used by the ckeditor5-widget package. -------------------- */
+
+  --ck-color-widget-blurred-border: hsl(0, 0%, 87%) !important;
+  --ck-color-widget-hover-border: hsl(43, 100%, 68%) !important;
+  --ck-color-widget-editable-focus-background: var(--ck-custom-white) !important;
+
+  /* -- Overrides the default colors used by the ckeditor5-link package. ---------------------- */
+  --ck-color-link-default: var(--accentColor) !important;
+}
+
+.mat-mdc-raised-button:not(:disabled) {
+  color: white !important;
+}
+.mat-mdc-raised-button {
+  padding: 10px 10px !important;
+}
+.mat-mdc-unelevated-button:not(:disabled) {
+  color: white !important;
+}
+
+.ti-header {
+  display: none !important;
+}

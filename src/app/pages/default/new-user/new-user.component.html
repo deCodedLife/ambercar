@@ -1,0 +1,39 @@
+<div id="auth-body" class="container">
+  <div class="flex justify-center">
+    <div id="form" class="background rounded">
+      <h2> {{ 'register.title' | translate }} </h2>
+
+      <div class="main-info">
+        <app-input
+          style="flex: 1"
+          [content]="user.email"
+          [placeholder]=" 'register.username' | translate "
+        ></app-input>
+        <app-input
+          style="flex: 1"
+          [type]="PASSWORD"
+          [placeholder]=" 'user.password' | translate "
+        ></app-input>
+        <app-input
+          style="flex: 1"
+          [type]="PASSWORD"
+          [placeholder]=" 'register.verifyPassword' | translate "
+        ></app-input>
+      </div>
+
+      <div class="w-full hr"></div>
+
+      <app-user-data [user]="user"></app-user-data>
+      <button
+        mat-raised-button
+        color="primary"
+        style="height: 60px"
+        class="h4"
+      > {{ 'user.save' | translate }} </button>
+
+    </div>
+    <div id="auth-image-container" class="flex" style="flex: 1">
+      <div class="image"></div>
+    </div>
+  </div>
+</div>

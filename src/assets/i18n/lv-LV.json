@@ -1,0 +1,253 @@
+{
+  "all" : {
+    "home": "Mājas",
+    "currency": "€",
+    "incorrectTime": "Laiks ievadīts nepareizi",
+    "privacy": "Privātuma politika",
+    "oxBox": "Izstrādātājs ",
+    "yes": "jā",
+    "no": "nē",
+    "next": "Tālāk",
+    "back": "Atpakaļ",
+    "from": "No",
+    "till": "Pēc",
+    "dateFormat": "dd.mm.yy"
+  },
+  "home": {
+    "title": "ĪRĒ AUTO RĪGĀ",
+    "description": "UZTICAMI UN ĀTRI PAKALPOJUMI\nNOMA AR TIESĪBĀM PIRKT",
+    "bookCar": "Rezervējiet automašīnu",
+    "popular": "Populārs",
+    "all": "Visi nomas auto",
+    "aboutTitle": "Kāpēc mēs",
+    "aboutDescription": "Ambercar jau vairāk kā 10 gadus nodrošina vācu kvalitātes automašīnas, uzticamus un ātrus auto nomas pakalpojumus.\n\nProfesionālā un draudzīgā Ambercar autonomas apkalpošana allaž ir tendēta uz klienta laiku un vērtībām.\n\nMūsu autoparks lepojas ar skaistiem, stilīgiem un ērtiem auto. Tagad piedāvājam arī jaunu produktu, auto noma ar izpirkuma tiesībām, izpērc kamēr nomā.",
+    "advantages": "MŪSU PRIORITĀTES IR JŪSU\nDROŠĪBA UN KOMFORTS",
+    "clients": "Klienti\napkalpošana",
+    "auto": "Automašīnas iekšā\nparks",
+    "years": "Gadi tirgū\nautonoma",
+    "trustedBy": "Mums\nuzticas"
+  },
+  "header": {
+    "carRental": "Autonoma",
+    "leaseToPurchase": "Līzings iegādei",
+    "reviews": "Atsauksmes",
+    "FAQ": "FAQ",
+    "contacts": "Kontakti",
+    "promotions": "Akcijas",
+    "rentalWithDriver": "Noma ar šoferi",
+    "loyalty": "Lojalitāte"
+  },
+  "contacts": {
+    "phone": "+371 20660000",
+    "address": "MŪKUSALAS IELA 59A, RĪGA, LV-1004, LATVIJA",
+    "details": "SIA «PDBC» ReG.nr. 40103593516",
+    "subscribe": "Abonējiet biļetenu"
+  },
+  "catalog": {
+    "title": "RĪGAS AUTO NOMA",
+    "description": "Minimālais auto nomas periods ir 1 diena. Cenas norādītas ar PVN 21%.\nĪres maksā iekļauta OCTA un KASKO ar pašrisku un plānveida apkopi.",
+    "pricingFrom": "No ",
+    "pricingPer": " € dienā",
+    "perMonth": " € mēnesī"
+  },
+  "filters": {
+    "title": "Filtri",
+    "receivePlace": "Pieņemšanas vieta",
+    "returnPlace": "Atgriešanās vieta",
+    "receiveDateTime": "Saņemšanas datums un laiks",
+    "returnDateTime": "Piegādes datums un laiks",
+    "addressSelection": "Ievadiet savu adresi",
+    "sorting": "Kārtot pēc",
+    "sortingOptions": [
+      "Dilstoša cena",
+      "Cena augoša",
+      "pēc vārda"
+    ],
+    "receivePlaces": [
+      "Rīga, Katrīnas dambis 29",
+      "Lidosta Rīga (RIX)",
+      "Rīgas Dzelzceļa stacija",
+      "Rīgas Pasažieru osta",
+      "Rīgas robežās",
+      "Jūrmala"
+    ],
+    "returnPlaces": [
+      "Rīga, Katrīnas dambis 29",
+      "Lidosta Rīga (RIX)",
+      "Rīgas Dzelzceļa stacija",
+      "Rīgas Pasažieru osta",
+      "Rīgas robežās",
+      "Jūrmala",
+      "Cits"
+    ],
+    "class": "Klase",
+    "classOptions": [
+      "E - ekonomiskā",
+      "V - vidējā",
+      "C - kompakts",
+      "M - mini",
+      "A - apvidus",
+      "S - standarta",
+      "P - biznesa",
+      "K - kravas busi",
+      "M - pasažieru busi"
+    ],
+    "brand": "Marka",
+    "brandOptions": [
+      "Audi",
+      "BMW",
+      "KIA",
+      "Land Rover",
+      "Lexus",
+      "Mercedes-Benz",
+      "Nissan",
+      "Peugeot",
+      "Toyota",
+      "VW",
+      "Skoda"
+    ],
+    "price": "Cena",
+    "color": "Krāsa",
+    "colorOptions": [
+      "Melns",
+      "Sudrabs",
+      "Balts",
+      "Zils",
+      "Brūns",
+      "Pelēks",
+      "Zaļš",
+      "sarkans"
+    ],
+    "passengers": "Pasažieri"
+  },
+  "product": {
+    "rentPeriod": "Nomas periods",
+    "unavailable": "Mašīna nav pieejama jūsu izvēlētajam periodam",
+    "fuelConsumption": "degvielas patēriņš: ",
+    "passengersCount": "Pasažieru skaits: ",
+    "transmission": "Pārnešana: ",
+    "doorsCount": "Durvju skaits: ",
+    "hasConditioner": "Ir kondicionieris: ",
+    "trunk": "Bagāžnieks: ",
+    "suitcases": "koferi",
+    "bags": "somas",
+    "daySummary": "Summa dienā (auto)",
+    "periodSummary": "Summa par periodu",
+    "pledge": "Ķīla",
+    "pledgeDetails": "Atteikties, parakstot nomas līgumu un saņemot automašīnu",
+    "kasco": "Pašrisks bez KASKO 0: ",
+    "kascoDetails": "Auto bojājumu gadījumā bez papildus apdrošināšanas",
+    "movement": "Kustība",
+    "mileage": "Nobraukums",
+    "mileageOptions": [
+      "Neierobežots",
+      "200 km dienā",
+      "100 km dienā"
+    ],
+    "leave": "Vai plānojat pamest valsti?",
+    "leaveOptions": [
+      "Jā, 5 € dienā",
+      "Nē"
+    ],
+    "insurance": "Apdrošināšana",
+    "insuranceLabel": "Īres maksā iekļauta KASKO apdrošināšana ar ierobežotu skaitu personīgo interešu un obligātā civiltiesiskās atbildības apdrošināšana.",
+    "addInsurance": "Vai pievienot papildu apdrošināšanu?",
+    "insuranceOptions": [
+      "Apdrošināšana",
+      "KASKO 0"
+    ],
+    "equipment": "Papildaprīkojums",
+    "equipmentLabel": "Papildu pakalpojumu izmaksas tiek aprēķinātas tikai par pirmajām 10 dienām.",
+    "equipmentOptions": [
+      "GPS navigators, 5 € dienā",
+      "Bērnu rati, 5 € dienā",
+      "Jumta bagāžnieks, 3 € dienā",
+      "Video reģistrators, 3 € dienā"
+    ],
+    "childSeats": "Bernu sedeklitis",
+    "childSeatsOptions": [
+      "Bernu sedeklitis 0-1 gads",
+      "Bêrnu sedeklitis 1-3 gadi",
+      "Bernu sedeklitis 3-5 gadi",
+      "Nav nepieciešams"
+    ],
+    "isRegistered": "Reģistrējies?",
+    "userType": [
+      "Privātpersona",
+      "Vienība"
+    ],
+    "comment": "Komentārs",
+    "rentType": "Nomas veids",
+    "reservation": "Rezervācija",
+    "reservationDetails": "Automašīnas rezervācija bez samaksas garantē tikai izvēlētās klases auto.",
+    "booking": "Rezervācija un apmaksa",
+    "bookingDetails": "Maksā tagad un mēs garantējam izvēlēto auto.",
+    "userAgreement": "Es piekrītu lietotāja līgumam",
+    "agreementLink": "lietotāja līgumam",
+    "submit": "Veikt rezervāciju",
+    "success": "Veiksmīgi",
+    "error": "Kaut kas nogāja greizi",
+    "fieldsError": "Aizpildiet visus nepieciešamos laukus"
+  },
+  "user": {
+    "name": "Vārds",
+    "surname": "Uzvārds",
+    "birthDate": "Dzimšanas datums",
+    "phoneNumber": "Telefona numurs",
+    "email": "E-mail",
+    "experience": "Pieredze",
+    "passport": "Pase vai ID karte",
+    "code": "Personas kods",
+    "address": "Adrese",
+    "city": "Pilsēta",
+    "zip": "Pasta indekss",
+    "driverLicence": "Autovadītāja apliecības numurs",
+    "save": "Saglabāt",
+    "username":  "Lietotājvārds",
+    "password": "Parole"
+  },
+  "auth": {
+    "title": "Pieslēgties",
+    "login": "Ievadiet e-pastu",
+    "password": "Ievadi paroli",
+    "signIn": "Ielogoties",
+    "emptyFields": "Ievadiet e-pastu un paroli",
+    "wrongData": "Nepareizi ievadīts pieteikšanās vārds vai parole",
+    "registerNoProfile": "Vai jums nav konta?",
+    "register": " Reģistrēties"
+  },
+  "register": {
+    "title": "Konta reģistrācija",
+    "username": "Pieslēgties",
+    "verifyPassword": "Atkal parole"
+  },
+  "profile": {
+    "path": "Profils",
+    "title": "Personīgā zona",
+    "mainInfo": "Pamatinformācija",
+    "security": "Drošība",
+    "history": "Stāsts",
+    "leave": "Izrakstīties",
+    "greetings": "Sveiki,",
+    "nextLevelSumPre": "Summa līdz ",
+    "nextLevelSumPos": ". līmenī: ",
+    "person": "Privātpersona",
+    "business": "Vienība",
+    "companyName": "Kompānijas nosaukums",
+    "regNumber": "Reģistrācijas numurs",
+    "companyAddress": "Juridiskā adrese",
+    "companyRealAddress": "Faktiskā adrese",
+    "bank": "Banka",
+    "iBan": "IBan",
+    "swift": "Swift",
+    "fio": "Vārds Uzvārds"
+  },
+  "history": {
+    "image": "Attēls",
+    "reservation": "Rezervācija",
+    "fromDate": "Saņemšanas datums",
+    "tillDate": "Atgriešanās datums",
+    "car": "Automašīna",
+    "payment": "Maksājums"
+  }
+}

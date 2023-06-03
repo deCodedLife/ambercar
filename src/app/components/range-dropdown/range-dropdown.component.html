@@ -1,0 +1,15 @@
+<div
+  id="dropdown"
+>
+  <div id="body"  class="combobox-body">
+    <input id="field" [value]="placeholder" readonly>
+    <div
+      class="hidden"
+    >
+      <mat-slider [min]="from" [max]="to" step="1" discrete [displayWith]="formatLabel">
+        <input [value]="from" matSliderStartThumb (valueChange)="minChanged.emit($event)">
+        <input [value]="to" matSliderEndThumb (valueChange)="maxChanged.emit($event)">
+      </mat-slider>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+#form {
+  gap: 15px;
+  height: 100%;
+  flex-direction: column;
+  display: flex;
+}
+#form button {
+  width: min-content;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  color: white;
+}
+
+/*# sourceMappingURL=page.component.css.map */

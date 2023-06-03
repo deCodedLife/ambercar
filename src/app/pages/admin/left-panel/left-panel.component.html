@@ -1,0 +1,24 @@
+<div id="panel-body">
+  <img src="assets/logo.png">
+  <button
+    mat-button
+    (click)="router.navigate( [ 'admin/pages' ] )"
+  >
+    <mat-icon>home</mat-icon>
+    Главная
+  </button>
+  <button
+    mat-button
+    (click)="router.navigate( [ 'admin/pages' ] )"
+  >
+    <mat-icon>collections_bookmark</mat-icon>
+    Контентные страницы
+  </button>
+  <button
+    mat-button
+    (click)="router.navigate( [ 'admin/settings' ] )"
+  >
+    <mat-icon>settings</mat-icon>
+    Настройки
+  </button>
+</div>

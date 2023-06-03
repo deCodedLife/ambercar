@@ -1,0 +1,110 @@
+<div
+  style="margin-top: 90px"
+>
+
+  <div class="container head-container">
+    <h2
+      style="color: var(--accentColor); line-height: 1.192"
+    > {{ 'home.title' | translate }} </h2>
+    <h2 style="white-space: pre-line; line-height: 1.192;"> {{ 'home.description' | translate }} </h2>
+  </div>
+
+  <div style="background-color: #242424">
+    <div class="container flex" id="head-container">
+      <div id="stracheble">
+        <div></div>
+      </div>
+      <div>
+        <div class="rental-container">
+          <h2 style="font-size: 30px;"
+          > {{ 'home.bookCar' | translate }} </h2>
+          <div class="hr"></div>
+          <app-date-time
+            [placeholder]="'product.rentPeriod' | translate"
+            [isWrapped]="true"
+            (dateChanged)="rentPeriod = $event"
+          ></app-date-time>
+          <button
+            mat-flat-button
+            color="primary"
+            style="height: 60px;"
+            class="h4"
+            (click)="gotoRent()"
+          > {{ 'product.submit' | translate }} </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container popular">
+    <h2> {{ 'home.popular' | translate }} </h2>
+  </div>
+  <div id="product-container" class="custom-container">
+    <app-product
+      *ngFor="let item of carList"
+      [productDetails]="item"
+    ></app-product>
+  </div>
+
+  <div id="banner0" class="custom-container">
+    <a
+      routerLink="/catalog/rent"
+      class="flex space-between background rounded items-center container-body"
+    >
+      <p class="h2"> {{ 'home.all' | translate }} </p>
+      <app-icon [rounded]="true" tag="north_east"></app-icon>
+    </a>
+  </div>
+
+  <div class="container" id="about-container">
+    <h2> {{ 'home.aboutTitle' | translate }} </h2>
+    <div id="about-body" class="flex">
+      <div id="about-text">
+        <p class="h4"> {{ 'home.aboutDescription' | translate }} </p>
+        <p class="h2"> {{ 'home.advantages' | translate }} </p>
+        <div id="stats">
+          <div>
+            <h1 style="color: var(--accentColor)"> 5 905 </h1>
+            <p class="h4"> {{ 'home.clients' | translate }} </p>
+          </div>
+          <div>
+            <h1 style="color: var(--accentColor)"> 52 </h1>
+            <p class="h4"> {{ 'home.auto' | translate }} </p>
+          </div>
+          <div>
+            <h1 style="color: var(--accentColor)"> 9 </h1>
+            <p class="h4"> {{ 'home.years' | translate }} </p>
+          </div>
+        </div>
+      </div>
+      <div id="about-image">
+        <div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div #reviews class="container">
+    <h1 > {{ 'header.reviews' | translate }} </h1>
+  </div>
+
+<!--  <div id="banner1" class="custom-container rounded">-->
+<!--    <div class="background brands container-body">-->
+<!--      <h1> {{ 'home.trustedBy' | translate }} </h1>-->
+<!--      <div id="brands">-->
+<!--        <div class="brand-border" *ngFor="let image of brands">-->
+<!--          <img [src]="image">-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <div id="reviews" class="custom-container">-->
+<!--    <h1 > {{ 'header.reviews' | translate }} </h1>-->
+<!--    <app-reviews-->
+<!--      page="home"-->
+<!--    ></app-reviews>-->
+<!--  </div>-->
+
+  <br>
+
+</div>

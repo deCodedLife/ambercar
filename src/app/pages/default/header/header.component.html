@@ -1,0 +1,28 @@
+<div id="header">
+  <div class="container">
+    <a routerLink="/" class="flex items-center">
+      <img id="logo" src="/assets/logo.png">
+    </a>
+    <nav>
+      <app-button link="/catalog/rent" title="header.carRental"></app-button>
+      <app-button link="/catalog/ransom" title="header.leaseToPurchase"></app-button>
+      <app-button title="header.reviews"></app-button>
+      <app-button title="header.FAQ"></app-button>
+      <app-button title="header.contacts"></app-button>
+    </nav>
+    <div id="contacts" class="flex items-center">
+      <app-button [bold]="true" title="contacts.phone"></app-button>
+      <app-user-logo></app-user-logo>
+      <app-button
+        [highlighted]="configs.currentLanguage == 'en-US'"
+        [bold]="true" (click)="configs.useLanguage( 'en-US' )" title="EN"></app-button>
+      <app-button
+        [highlighted]="configs.currentLanguage == 'lv-LV'"
+        [bold]="true" (click)="configs.useLanguage( 'lv-LV' )" title="LV"></app-button>
+      <app-button
+        [highlighted]="configs.currentLanguage == 'ru-RU'"
+        [bold]="true" (click)="configs.useLanguage( 'ru-RU' )" title="RU"></app-button>
+      <mat-icon (click)="openSideNav()" style="cursor: pointer;" id="menu">menu</mat-icon>
+    </div>
+  </div>
+</div>

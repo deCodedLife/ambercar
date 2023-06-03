@@ -1,0 +1,24 @@
+#panel-body {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 290px;
+  background-color: #242424;
+  height: 100%;
+  z-index: 4;
+
+  img {
+    padding: 60px 30px;
+    width: 100%;
+  }
+
+  .mdc-button {
+    justify-content: left !important;
+  }
+
+  button {
+    text-align: left;
+    margin-top: 10px;
+    padding-left: 15px;
+  }
+}

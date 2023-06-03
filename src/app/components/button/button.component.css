@@ -1,0 +1,30 @@
+p, h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.button {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+p {
+  cursor: pointer;
+}
+p:hover {
+  color: var(--accentColor);
+}
+
+.highlighted {
+  color: var(--accentColor);
+  fill: var(--accentColor);
+}
+.highlighted:hover {
+  color: #fff;
+  fill: white;
+}
+
+/*# sourceMappingURL=button.component.css.map */

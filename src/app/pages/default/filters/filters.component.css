@@ -1,0 +1,66 @@
+p, h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  color: white;
+}
+
+#filters {
+  width: 100%;
+  background-color: #242424;
+  padding: 25px 0;
+}
+
+#container {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  padding-bottom: 30px;
+}
+@media screen and (max-width: 767px) {
+  #container #places {
+    display: block;
+  }
+}
+#container app-combobox {
+  flex: 1;
+}
+@media screen and (max-width: 1350px) {
+  #container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #container {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 830px) {
+  #container {
+    grid-template-columns: 1fr;
+  }
+}
+
+#sort {
+  text-align: right;
+  min-width: 280px;
+}
+
+#show-filters {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  #additional-filters {
+    display: none;
+  }
+  #show-filters {
+    display: block;
+  }
+  #sort {
+    text-align: left;
+    min-width: 200px;
+  }
+}
+
+/*# sourceMappingURL=filters.component.css.map */

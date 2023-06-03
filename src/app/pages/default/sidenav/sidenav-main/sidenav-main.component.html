@@ -1,0 +1,24 @@
+<div class="flex" style="gap: 10px">
+  <app-button
+    [highlighted]="config.currentLanguage == 'en-US'"
+    [bold]="true" (click)="config.useLanguage( 'en-US' )" title="EN"></app-button>
+  <app-button
+    [highlighted]="config.currentLanguage == 'lv-LV'"
+    [bold]="true" (click)="config.useLanguage( 'lv-LV' )" title="LV"></app-button>
+  <app-button
+    [highlighted]="config.currentLanguage == 'ru-RU'"
+    [bold]="true" (click)="config.useLanguage( 'ru-RU' )" title="RU"></app-button>
+</div>
+
+<div style="height: 100%;">
+  <app-button (click)="close()" link="/catalog/rent" class="h3" title="header.carRental"></app-button>
+  <app-button (click)="close()" link="/catalog/ransom" class="h3" title="header.leaseToPurchase"></app-button>
+  <app-button class="h3" title="header.reviews"></app-button>
+  <app-button class="h3" title="header.FAQ"></app-button>
+  <app-button class="h3" title="header.contacts"></app-button>
+</div>
+
+<div id="footer">
+  <a class="h3" href="tel:" type="tel">8 800 000 00 00</a>
+  <a class="h3" href="mailto:" type="mailto">mail@test.com </a>
+</div>

@@ -1,0 +1,23 @@
+<div id="auth-body">
+  <div id="auth-container">
+    <div id="auth-form" class="rounded">
+      <app-input
+        [placeholder]=" 'register.username' | translate "
+        (changed)="this.username = $event"
+      ></app-input>
+      <app-input
+        [placeholder]=" 'user.password' | translate "
+        [type]="PASSWORD"
+        (changed)="this.password = $event"
+      ></app-input>
+      <button
+        mat-raised-button
+        color="primary"
+        class="h3"
+        style="height: 60px; margin-top: 20px; width: 100%"
+        (click)="this.signIn()"
+      > {{ 'auth.signIn' | translate }} </button>
+    </div>
+  </div>
+  <div id="auth-img"></div>
+</div>

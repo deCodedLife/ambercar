@@ -1,0 +1,28 @@
+#auth-body {
+  position: fixed;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: #343434;
+}
+
+#auth-form {
+  padding: 30px;
+  width: 60%;
+  background-color: #242424;
+}
+
+#auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+#auth-img {
+  flex: 1;
+  background-image: url(/assets/pic-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

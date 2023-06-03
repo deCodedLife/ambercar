@@ -1,0 +1,58 @@
+p, h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  color: white;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #242424;
+  padding: 12px 0;
+  z-index: 999;
+}
+#header #menu {
+  display: none;
+}
+@media screen and (max-width: 1200px) {
+  #header nav {
+    display: none;
+  }
+  #header #menu {
+    display: block;
+  }
+  #header #logo {
+    height: 55px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #header #logo {
+    height: 35px;
+  }
+  #header app-button {
+    display: none;
+  }
+}
+
+#contacts {
+  gap: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+.selected {
+  color: var(--accentColor);
+}
+
+/*# sourceMappingURL=header.component.css.map */

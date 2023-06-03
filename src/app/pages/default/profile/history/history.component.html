@@ -1,0 +1,45 @@
+<div class="background custom-container rounded">
+  <p class="h3"> {{ ('profile.greetings' | translate) + ' ' + user.name + '!' }} </p>
+  <p class="h5"> {{ ('profile.nextLevelSumPre' | translate) + ' ' + 1 + ('profile.nextLevelSumPos' | translate) }} </p>
+  <br>
+  <p class="h4>"> {{ 'profile.person' | translate }} </p>
+
+  <br>
+
+  <table>
+    <thead>
+      <th> {{ 'history.image' | translate }} </th>
+      <th> {{ 'history.reservation' | translate }} </th>
+      <th> {{ 'history.fromDate' | translate }} </th>
+      <th> {{ 'history.tillDate' | translate }} </th>
+      <th> {{ 'history.car' | translate }} </th>
+      <th> {{ 'history.payment' | translate }} </th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let car of items; index as i">
+
+          <td *ngIf="cars[i]">
+            <img [src]="'https://img.schedulebull.com/' + cars[i].mainImage + '&x=100&y=50'" alt="car">
+          </td>
+          <td *ngIf="cars[i]"> <p> {{ car.rez_number }} </p> </td>
+          <td *ngIf="cars[i]"> <p> {{ car.from_time.split(' ')[0] }} </p> </td>
+          <td *ngIf="cars[i]"> <p> {{ car.to_time.split(' ')[0] }} </p> </td>
+          <td *ngIf="cars[i]"> <p> {{ car.car }} </p> </td>
+          <td *ngIf="cars[i]"> <p> {{ car.price_sum }} </p> </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="history-list">
+    <div class="list-item" [style.border]="cars[i] ? '' : 'none'" *ngFor="let car of items; index as i">
+      <div *ngIf="cars[i]">
+        <img class="rounded" [src]="'https://img.schedulebull.com/' + cars[i].mainImage + '&x=400&y=250'" alt="car">
+        <p class="h5"> {{ ('history.reservation' | translate) + ': ' + car.rez_number }} </p>
+        <p class="h5"> {{ ('history.fromDate' | translate) + ': ' + car.from_time.split(' ')[0] }} </p>
+        <p class="h5"> {{ ('history.fromDate' | translate) + ': ' + car.to_time.split(' ')[0] }} </p>
+        <p class="h5"> {{ ('history.car' | translate) + ': ' + car.car }} </p>
+        <p class="h5"> {{ ('history.payment' | translate) + ': ' + car.price_sum }} </p>
+      </div>
+    </div>
+  </div>
+</div>

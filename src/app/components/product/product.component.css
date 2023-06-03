@@ -1,0 +1,28 @@
+p, h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+#product {
+  padding: 20px;
+}
+#product .mat-accent .mat-slider-track-fill {
+  background-color: red !important;
+}
+#product .mat-slider-thumb-label {
+  background-color: red !important;
+}
+#product .mat-slider-visual-thumb {
+  background-color: red !important;
+}
+#product img {
+  width: 100%;
+}
+@media screen and (width: 420px) {
+  #product {
+    max-width: unset;
+  }
+}
+
+/*# sourceMappingURL=product.component.css.map */

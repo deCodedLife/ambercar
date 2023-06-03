@@ -1,0 +1,21 @@
+<div class="flex" style="gap: 15px">
+
+  <mat-icon
+    *ngIf="icon"
+    [ngClass]="{ 'highlighted': highlighted }"
+  > {{ icon }} </mat-icon>
+
+  <a
+    *ngIf="link != ''"
+    [routerLink]="link"
+    style="all: unset">
+    <div class="button">
+      <p [ngClass]=" { 'bold': bold, 'highlighted': highlighted } "> {{ title | translate }} </p>
+    </div>
+  </a>
+
+  <div *ngIf="link == ''" class="button">
+    <p [ngClass]=" { 'bold': bold, 'highlighted': highlighted } "> {{ title | translate }} </p>
+  </div>
+
+</div>

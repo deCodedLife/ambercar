@@ -1,0 +1,34 @@
+<div class="closed" *ngIf="isClosed">
+  <h1>Vietne slēgta apkopes dēļ</h1>
+</div>
+<mat-sidenav-container *ngIf="!isClosed">
+
+  <mat-sidenav
+    #sidenav
+    mode="over"
+    id="sidenav"
+    *ngIf="!isAdmin()"
+  >
+    <app-sidenav></app-sidenav>
+  </mat-sidenav>
+
+  <mat-sidenav-content
+    [ngClass]="{
+      'content': isAdmin() && !isSignIn()
+    }"
+  >
+    <div id="unavailable" *ngIf="isAdmin()">
+      <h2 style="color: var(--accentColor)"> Unavailable on mobile </h2>
+    </div>
+
+    <app-left-panel *ngIf="isAdmin() && !isSignIn()"></app-left-panel>
+    <app-admin-header *ngIf="isAdmin() && !isSignIn()"></app-admin-header>
+    <app-header *ngIf="!isAdmin()"></app-header>
+    <div id="router" [ngClass]="{ 'admin': isAdmin() && !isSignIn() }">
+      <router-outlet></router-outlet>
+    </div>
+    <app-footer *ngIf="!isAdmin()"></app-footer>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

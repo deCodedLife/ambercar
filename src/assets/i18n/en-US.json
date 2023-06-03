@@ -1,0 +1,253 @@
+{
+  "all" : {
+    "home": "Home",
+    "currency": "$",
+    "incorrectTime": "Time entered incorrectly",
+    "privacy": "Privacy Policy",
+    "oxBox": "Developed by ",
+    "yes": "yes",
+    "no": "no",
+    "next": "Next",
+    "back": "Back",
+    "from": "From",
+    "till": "Till",
+    "dateFormat": "mm.dd.yy"
+  },
+  "home": {
+    "title": "RENT A CAR IN RIGA",
+    "description": "RELIABLE AND FAST SERVICES\nRENTAL WITH THE RIGHT TO BUY",
+    "bookCar": "Book a car",
+    "popular": "Popular",
+    "all": "See the entire fleet",
+    "aboutTitle": "Why us",
+    "aboutDescription": "Ambercar has been providing German quality cars, reliable and fast car rental services for more than 10 years.\n\nAmbercar's professional and friendly self-service is always focused on the customer's time and values.\n\nOur fleet is proud of beautiful, stylish and comfortable cars. Now we also offer a new product, car rental with redemption rights, buy while renting.",
+    "advantages": "OUR PRIORITIES ARE YOURS\nSAFETY AND COMFORT",
+    "clients": "Clients\nuse our service",
+    "auto": "Cars in the\npark",
+    "years": "Years in the\ncar rental market",
+    "trustedBy": "Trusted\nby"
+  },
+  "header": {
+    "carRental": "Car Rental",
+    "leaseToPurchase": "Lease to purchase",
+    "reviews": "Reviews",
+    "FAQ": "FAQ",
+    "contacts": "Contacts",
+    "promotions": "Promotions",
+    "rentalWithDriver": "Rental with Driver",
+    "loyalty": "Loyalty"
+  },
+  "contacts": {
+    "phone": "+371 20660000",
+    "address": "59A MUKUSALAS STREET, RIGA, LV-1004, LATVIA",
+    "details": "SIA «PDBC» Reg. no. 40103593516",
+    "subscribe": "Subscribe to newsletter"
+  },
+  "catalog": {
+    "title": "RIGA CAR RENTAL",
+    "description": "The minimum car rental period is 1 day. Prices are inclusive of VAT 21%.\nThe rent includes OCTA and KASCO with deductible and scheduled maintenance.",
+    "pricingFrom": "From ",
+    "pricingPer": " € per day",
+    "perMonth": " € per month"
+  },
+  "filters": {
+    "title": "Filters",
+    "receivePlace": "Receive place",
+    "returnPlace": "Return place",
+    "receiveDateTime": "Date and time of receipt",
+    "returnDateTime": "Date and time of return",
+    "addressSelection": "Select address",
+    "sorting": "Sort by",
+    "sortingOptions": [
+      "Descending price",
+      "Price ascending",
+      "By name"
+    ],
+    "receivePlaces": [
+      "Riga, Katrina dam 29",
+      "Riga Airport (RIX)",
+      "Riga railway station",
+      "Riga Passenger Port",
+      "within Riga",
+      "Jurmala"
+    ],
+    "returnPlaces": [
+      "Riga, Katrina dam 29",
+      "Riga Airport (RIX)",
+      "Riga railway station",
+      "Riga Passenger Port",
+      "within Riga",
+      "Jurmala",
+      "Other"
+    ],
+    "class": "Class",
+    "classOptions": [
+      "E - economic",
+      "V - average",
+      "C - compact",
+      "M - mini",
+      "A - adaptive",
+      "S - standard",
+      "P - business",
+      "K - cargo buses",
+      "M - passenger bus"
+    ],
+    "brand": "Brand",
+    "brandOptions": [
+      "Audi",
+      "BMW",
+      "KIA",
+      "Land Rover",
+      "Lexus",
+      "Mercedes-Benz",
+      "Nissan",
+      "Peugeot",
+      "Toyota",
+      "VW",
+      "Skoda"
+    ],
+    "price": "Price",
+    "color": "Color",
+    "colorOptions": [
+      "Black",
+      "Silver",
+      "White",
+      "Blue",
+      "Brown",
+      "Gray",
+      "Green",
+      "Red"
+    ],
+    "passengers": "Passengers"
+  },
+  "product": {
+    "rentPeriod": "Rent period",
+    "unavailable": "The machine is unavailable for the period you selected",
+    "fuelConsumption": "Fuel consumption",
+    "passengersCount": "Passengers count: ",
+    "transmission": "Transmission: ",
+    "doorsCount": "Doors count: ",
+    "hasConditioner": "Has conditioner: ",
+    "trunk": "Trunk: ",
+    "suitcases": "suitcase(s)",
+    "bags": "bag(s)",
+    "daySummary": "Amount per day (car)",
+    "periodSummary": "Amount for the period",
+    "pledge": "Pledge",
+    "pledgeDetails": "Withdrawn upon signing the lease agreement and receiving the car",
+    "kasco": "Deductible without KASCO 0: ",
+    "kascoDetails": "In case of damage to the car without additional insurance",
+    "movement": "Movement",
+    "mileage": "Mileage",
+    "mileageOptions": [
+      "Unlimited",
+      "200 km per day",
+      "100 km per pay"
+    ],
+    "leave": "Are you planning to leave the country?",
+    "leaveOptions": [
+      "Yes, 5 € per day",
+      "No"
+    ],
+    "insurance": "Insurance",
+    "insuranceLabel": "The rent includes CASCO insurance with a limited number of personal interests and compulsory third party liability insurance.",
+    "addInsurance": "Add additional insurance?",
+    "insuranceOptions": [
+      "Insurance",
+      "KASKO 0"
+    ],
+    "equipment": "Optional equipment",
+    "equipmentLabel": "The cost of additional services is calculated only for the first 10 days.",
+    "equipmentOptions": [
+      "GPS Navigator, 5 € per day",
+      "Baby stroller, 5 € per day",
+      "Roof rack, 3 € per day",
+      "Video recorder, 3 € per day"
+    ],
+    "childSeats": "Child seat",
+    "childSeatsOptions": [
+      "Child seat (up to a year)",
+      "Child seat 1-3 years",
+      "Child seat 3-5 years",
+      "Not required"
+    ],
+    "isRegistered": "Registered?",
+    "userType": [
+      "Private person",
+      "Entity"
+    ],
+    "comment": "A comment",
+    "rentType": "Rent type",
+    "reservation": "Reservation",
+    "reservationDetails": "Reservation of a car without payment guarantees only the selected class of car.",
+    "booking": "Booking and payment",
+    "bookingDetails": "Pay now and we guarantee you the chosen car.",
+    "userAgreement": "I accept the ",
+    "agreementLink": "user agreement",
+    "submit": "Make a reservation",
+    "success": "Success",
+    "error": "Something went wrong",
+    "fieldsError": "Fill in all required fields"
+  },
+  "user": {
+    "name": "Name",
+    "surname": "Surname",
+    "birthDate": "Birth date",
+    "phoneNumber": "Phone number",
+    "email": "E-mail",
+    "experience": "Experience",
+    "passport": "Passport or ID card",
+    "code": "Personal code",
+    "address": "Address",
+    "city": "City",
+    "zip": "Postcode",
+    "driverLicence": "Driver's license number",
+    "save": "Save",
+    "username":  "Login",
+    "password": "Password"
+  },
+  "auth": {
+    "title": "Login",
+    "login": "Enter email",
+    "password": "Enter password",
+    "signIn": "Sign in",
+    "emptyFields": "Enter email and password",
+    "wrongData": "Login or password entered incorrectly",
+    "registerNoProfile": "Don't have an account?",
+    "register": " Register"
+  },
+  "register": {
+    "title": "Account registration",
+    "username": "Login",
+    "verifyPassword": "The password again"
+  },
+  "profile": {
+    "path": "Profile",
+    "title": "Personal Area",
+    "mainInfo": "Main information",
+    "security": "Safety",
+    "history": "Story",
+    "leave": "Sign out",
+    "greetings": "Hello,",
+    "nextLevelSumPre": "Amount to ",
+    "nextLevelSumPos": ". Level: ",
+    "person": "Private person",
+    "business": "Legal entity",
+    "companyName": "Company name",
+    "regNumber": "Registration number",
+    "companyAddress": "Legal address",
+    "companyRealAddress": "Actual address",
+    "bank": "Bank",
+    "iBan": "IBan",
+    "swift": "Swift",
+    "fio": "First Name, Last Name"
+  },
+  "history": {
+    "image": "Image",
+    "reservation": "Reservation",
+    "fromDate": "Receive date",
+    "tillDate": "Return date",
+    "car": "Car",
+    "payment": "Payment"
+  }
+}

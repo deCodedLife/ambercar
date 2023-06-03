@@ -1,0 +1,76 @@
+.main-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media screen and (max-width: 767px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.custom-container {
+  padding: 30px;
+  max-height: 800px;
+  overflow-y: auto;
+}
+@media screen and (max-width: 800px) {
+  .custom-container {
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .custom-container {
+    max-height: none;
+  }
+}
+
+table {
+  width: 100%;
+}
+table thead th:first-child {
+  text-align: left;
+}
+table thead th:last-child {
+  text-align: right;
+}
+table th {
+  color: #8f8f8f;
+}
+table td {
+  text-align: center;
+}
+table td:first-child {
+  text-align: left;
+}
+table td:last-child {
+  text-align: right;
+}
+@media screen and (max-width: 767px) {
+  table {
+    display: none;
+  }
+}
+
+.history-list {
+  display: none;
+  gap: 15px;
+}
+@media screen and (max-width: 767px) {
+  .history-list {
+    display: grid;
+  }
+}
+
+.list-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding-bottom: 10px;
+}
+.list-item:last-child {
+  border: none;
+}
+.list-item img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=history.component.css.map */

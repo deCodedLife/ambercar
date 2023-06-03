@@ -1,0 +1,26 @@
+<div class="background custom-container rounded">
+  <p class="h3"> {{ ('profile.greetings' | translate) + ' ' + user.name + '!' }} </p>
+  <p class="h5"> {{ ('profile.nextLevelSumPre' | translate) + ' ' + 1 + ('profile.nextLevelSumPos' | translate) }} </p>
+  <br>
+  <p class="h4>"> {{ 'profile.person' | translate }} </p>
+
+  <div class="main-grid">
+    <app-input
+      [content]="user.email"
+      [placeholder]=" 'user.username' | translate "
+    ></app-input>
+    <app-input
+      [type]="PASSWORD"
+      [placeholder]=" 'user.password' | translate "
+    ></app-input>
+
+    <button
+      mat-raised-button
+      color="primary"
+      style="height: 60px"
+      class="h4"
+    > {{ 'user.save' | translate }} </button>
+
+
+  </div>
+</div>
