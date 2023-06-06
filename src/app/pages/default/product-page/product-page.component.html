@@ -50,6 +50,8 @@
               <app-date-time
                 [placeholder]=" 'filters.receiveDateTime' | translate "
                 (dateChanged)="changeDate( $event )"
+                [customFromDate]="catalog.from"
+                [customTillDate]="catalog.till"
               ></app-date-time>
             </div>
           <div>

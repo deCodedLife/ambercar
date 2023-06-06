@@ -249,5 +249,175 @@
     "tillDate": "Atgriešanās datums",
     "car": "Automašīna",
     "payment": "Maksājums"
+  },
+  "faq": {
+    "sections": [
+      {
+        "title": "Auto rezervācija",
+        "topics": [
+          {
+            "title": "Rezervācijas apmaksas modeļi",
+            "content": "Auto noma Ambercar piedāvā divus rezervācijas apmaksas modeļus:\n\n\t1. Jūs varat rezervēt automašīnu, bet, ja neveicat rēķina apmaksu, mēs garantējam tikai vēlamo auto klasi, bet ne konkrētu modeli.\n\t2. Jūs varat rezervēt automašīnu, veikt 100% rēķina apmaksu un mēs Jums garantēsim konkrēto automašīnas modeli!\n\nAplūko Ambercar pieejamos īstermiņa nomas auto!"
+          },
+          {
+            "title": "Kā var zināt, ka rezervācija ir veikta?",
+            "content": "Ja Jūs būsiet veicis rezervāciju tiešsaistē mūsu mājas lapā, pirmkārt, pēc gala rezervācijas apstiprināšanas atvērsies \"Paldies!\" lapa, kas informēs Jūs par veikto un apstiprināto rezervāciju.\nOtrkārt, Jūs, norādītajā e-pastā saņemsiet rēķinu par autonomas pakalpojumiem.\nTreškārt, e-pastā saņemsiet ziņojumu no auto nomas Ambercar menedžera par rezervācijas apstiprinājumu vai atteikumu."
+          },
+          {
+            "title": "Vai iespējams nomainīt rezervētā nomas auto klasi?",
+            "content": "Jā, Ambercar autonomas birojā ir iespējams apmainīt auto klasi uz zemāku vai augstāku.\nJā, Ambercar autonomas birojā ir iespējams apmainīt auto klasi uz zemāku vai augstāku.\nIevērojiet, ka tarifs var mainīties un kopējās izmaksas palielināties!"
+          },
+          {
+            "title": "Vai Ambercar auto nomai ir birojs lidostā Rīga?",
+            "content": "Nē, pagaidām lidostā \"Rīga\" nav Ambercar autonomas biroja.\nJa nepieciešams, mēs automašīnu piegādājam lidostā Rīga bezmaksas. \nArī atgiezt automašīnu ir iespējams lidostas stāvvietā \"Park Smart\" bezmaksas. "
+          },
+          {
+            "title": "Vai iespējams veikt rezervāciju mājaslapā?",
+            "content": "Jā, protams! Tas ir ātri, ērti un droši! \n\nRezervē, veic apmaksu mājaslapā un saņem 10% atlaidi auto nomas pakalpojumiem!"
+          }
+        ]
+      },
+      {
+        "title": "Auto iznomāšana",
+        "topics": [
+          {
+            "title": "Kādi ir Ambercar auto nomas piedāvātie auto?",
+            "content": "Mūsu autoparku veido labākās un modernākās pasaules marku automašīnas kā \"Audi\", \"BMW\", \"VW\", \"Toyota\" u.c.\n\nPiedāvājam no ekonomiskās līdz pat luksus klases automašīnām!\n\nTāpat piedāvājam kravas busu noma, apvidus auto noma, pasažieru mikroautobusu īri!\n\nPaņem auto uz pāris dienām vai izvēlies auto noma ilgtermiņā!\n\nVairāk informācijas pa tālruni: +371 20660000 "
+          },
+          {
+            "title": "Kā iznomāt automašīnu?",
+            "content": "Iznomāt auto Ambercar autonomā ir vienkārši!\n\nNomas auto rezervēt vari:\nmājas lapā www.ambercar.eu;\nzvanot uz tālruni: +371 20660000;\nnosūtot pieteikumu elektroniski uz e-pasta adresi info@ambercar.eu;\napmeklējot Ambercar biroju Katrīnas dambī 29, Rīgā."
+          },
+          {
+            "title": "Kurš nomas auto ir man piemērotākais?",
+            "content": "Auto noma Ambercar automašīnas kategorizē pēc izmēra atbilstoši ACRISS Auto kodam.\n\nPiedāvājam iespēju atlasīt automašīnas pēc markas un krāsas!\n\nLīdzās katram mašīnas tipam esam noteikuši, cik pasažieru un bagāžas tajā ietilpst, lai palīdzētu izvēlēties pareizā izmēra auto Jūsu ceļojumam.\n\nTāpat automašīnas aprakstā variet uzzināt, kāda ātrumkārba un ekstras ir automašīnai, kāda degviela jāpilda un, kāds ir tās patēriņš.\n\nAmbercar atvieglo Jūsu lēmuma pieņemšanas procesu!"
+          },
+          {
+            "title": "Kā uzzināšu par pārkāpumiem?",
+            "content": "Saņemot pārkāpumu, Ambercar autonomas administrācija sagatavo un izsūta rēķinu uz Jūsu e-pastu.\n\nJa rēķins netiek apmaksāts laikā, administrācijai ir tiesības šo naudu ieturēt no Nomnieka bankas kartes. Šāds punkts ir norādīts līgumā, par ko klients parakstās, apliecinot, ka uzņemās pilnu atbildību par visiem pārkāpumiem, kas radušies automašīnas nomas laikā. "
+          },
+          {
+            "title": "Kāda autovadītāja apliecība ir derīga?",
+            "content": "Ambercar auto nomas pakalpojumu izmantošanai derīgas ir arī autovadītāja apliecības, kas ir izdotas ASV, Lielbritānijā un Austrālijā.\n\nStarptautiskā vadītāja apliecība nav nepieciešama."
+          },
+          {
+            "title": "Kāds ir minimālais nomnieka stāžs?",
+            "content": "Lai iznomātu automašīnu Ambercar autonomā, vadītāja stāžam ir jābūt vismaz 1 gads. \n\nJāņem vērā, - ja stāžs ir mazāks par 3 gadiem, par to tiek piemērota papildus maksa jeb 15 Eur/dienā.\n\nŅemiet vērā, ka dažiem auto ir minimālais vecums ir 25 gadi, lai nomātu auto. "
+          },
+          {
+            "title": "Kādā stāvoklī auto jāatgriež?",
+            "content": "Automašīnu mēs Jums iedodam ar pilnu bāku, tīru no iekšpuses un ārpuses. Tieši tādu - ar pilnu bāku, tīru no iekšpuses un ārpuses, tā Jums ir jāatgriež nomas perioda beigās. \n\nJa, atgriežot automašīnu, tā ir netīra un/vai nesakopta, nomniekam var tikt izstādīts rēķins par netīru virsbūvi, salonu, sākot no 20 Eur. \n\nJa, atgriežot automašīnu, bāka nav uzpildīta līdz galam, nomniekam tiek izstādīts rēķins par nesalietu degvielu - 2,50 Eur/litrā. \n\n*šie punkti ir rakstīti līgumā, par kuru nomnieks parakstās pie auto saņemšanas. "
+          },
+          {
+            "title": "Vai iznomājat auto ārpus darba laika?",
+            "content": "Jā, auto nomas pakalpojumus ir iespējams saņemt arī ārpus darba laika, iepriekš par to vienojoties.\nAutomašīnas nodošana un saņemšana ārpus darba laika maksā 40 EUR.\nAutomašīnu bezmaksas iespējams atstāt lidostas \"Rīga\" stāvvietā \"Park Smart\", jebkurā diennakts laikā. "
+          },
+          {
+            "title": "Kam jāpievērš uzmanība, parakstot auto nomas līgumu?",
+            "content": "Pirms auto nomas līguma parakstīšanas, uzmanīgi pārbaudiet līguma noteikumus un nosacījumus, līgumā noteikto summu par auto nomu, kā arī ietvertos papildu pakalpojumus!"
+          },
+          {
+            "title": "Kam japievērš uzmanība, saņemot iznomāto automašīnu?",
+            "content": "Saņemot iznomāto automašīnu, pārbaudiet tās vizuālo un tehnisko stāvokli kopā ar autonomas darbinieku. \n\nJa konstatējat kādus defektus, ziņojiet par tiem auto nomas darbiniekam. Šie defekti jāieraksta automašīnas tehniskā stāvokļa aktā.\n\nVienmēr pārbaudiet gan automašīnas virsbūves stāvokli, tajā skaitā arī sīkāku skrāpējumu vai iesitumu esamību, kā arī salona stāvokli.\n\nLielāki traipi uz sēdekļiem, ieplēsta sēdekļu vai salona apdare, cigarešu pēdas noteikti jāuzrāda nomas darbiniekam, pirms sākat lietot nomas automašīnu.\n\nTāpat ieteicams pārbaudīt arī automašīnas jumtu un bagāžas nodalījumu.\n\nVisiem bojājumiem jābūt atzīmētiem automašīnas tehniskā stāvokļa novērtējuma aktā."
+          },
+          {
+            "title":"Kādus papildus pakalpojumus piedāvā Ambercar?",
+            "content": "Ambercar auto noma piedāvā sekojošos papildu pakalpojumus un iespējas:\nViena virziena nomu; \n\nPapildus vadītāju;\n\nAuto saņemšanu un nodošanu viesnīcā bezmaksas;\n\nAuto saņemšanu un nodošanu lidostas „Rīga” stāvvietā „Park Smart” bezmaksas;\n\nBērnu autosēdeklīti;\n\nGPS navigācijas iekārtu;\n\nŠofera pakalpojumus;\n\nTransfēru servisu;\n\nAutomašīnu dekorēšanu."
+          }
+        ]
+      },
+      {
+        "title": "Drošība",
+        "topics": [
+          {
+            "title": "Kas ir nomnieka pašrisks?",
+            "content": "Nomnieka pašrisks jeb atbildība ir tā zaudējumu daļa, ko, iestājoties apdrošināšanas gadījumam, sedz apdrošinājuma ņēmējs - šajā gadījumā automašīnas Nomnieks."
+          },
+          {
+            "title": "Kā rīkoties ceļu satiksmes negadījumā?",
+            "content": "Iestājoties KASKO gadījumam, Nomnieka pienākums ir ievērot un rīkoties saskaņā ar Nomas līguma noteikumiem un aizpildīt Ambercar auto nomas veidlapu “Ziņojums par transporta līdzekļa bojājumu vai CSN”, kā arī ievērot nomas līguma vispārējos noteikumus;\n\nJa ceļu satiksmes negadījumā nedaudz cietušas līdz divām automašīnām – policija nav jāsauc, pietiek ar ceļu satiksmes negadījuma saskaņotā paziņojuma aizpildīšanu;\n\nJa iesaistītas vairāk nekā 2 automašīnas, nepieciešams izsaukt policiju!"
+          },
+          {
+            "title": "Vai Ambercar automašīnas ir apdrošinātas?",
+            "content": "Jā! Visām mūsu autoparka automašīnām ir speciālā auto nomas KASKO polise un obligātā civiltiesiskā apdrošināšana."
+          },
+          {
+            "title": "Kāda ir samaksa par noteiktā nobraukuma pārsniegšanu?",
+            "content": "Par katru ierobežotā nobraukuma pārsniegto kilometru jāpiemaksā 0,15 EUR."
+          },
+          {
+            "title": "Ko darīt, ja nomas laikā rodas tehniskas problēmas?",
+            "content": "Avārijas vai bojājumu gadījumos auto noma Ambercar nodrošina 24 stundu bezmaksas tehnisko atbalstu, zvanot uz tālruņa numuru +371 20010111"
+          }
+        ]
+      },
+      {
+        "title": "Aizliegtais un atļautais",
+        "topics": [
+          {
+            "title": "Kādi ir iespējamie nobraukuma veidi?",
+            "content": "Ambercar autonoma piedāvā 3 nobraukuma veidus:\n\n100 km/dienā;\n200 km/dienā;\nNeierobežots nobraukums. \nNav jāsatraucas, ka dienā nenobrauc izvēlēto nobraukumu. Ambercar autonoma rēķina kopējos nobrauktos kilometrus visā nomas periodā!\n\n*Par katru ierobežotā nobraukuma pārsniegto kilometru jāpiemaksā 0,15 EUR"
+          },
+          {
+            "title": "Vai auto drīkst vadīt 2 autovadītāji?",
+            "content": "Jā, bet atbildību par automašīnu un līguma punktu ievērošanu uzņemas persona, kura norādīta līgumā."
+          },
+          {
+            "title": "Vai automašīnās drīkst smēķēt?",
+            "content": "Nē, automašīnā ir aizliegts smēķēt! \n\n\nSods, sākot 200 EUR tiek piemērots visiem, kas ir pārkāpuši šo aizliegumu!"
+          }
+        ]
+      },
+      {
+        "title": "Samaksa par auto nomu",
+        "topics": [
+          {
+            "title": "Vai auto nodošana stāvvietā „Park Smart” ir maksas pakalpojums?",
+            "content": "Nē, automašīnas nodošana stāvvietā „Park Smart\" ir bezmaksas.\n\nArī auto saņemšana lidostā \"Rīga\" ir bezmaksas."
+          },
+          {
+            "title": "Vai iemaksātā nauda tiek atgriezta, ja atdodu auto ātrāk?",
+            "content": "Nē, samaksātā nauda netiek atgriezta atpakaļ, neskatoties uz to, ka auto tiek atgriezts ātrāk, jo kopējā nomas maksa ir atkarīga no dienu skaita.\n\nJa esiet veicis apmaksu un atceļiet rezervāciju ātrāk kā 2 nedēļas pirms auto nomas sākuma, samaksātā nauda netiek atgriezta atpakaļ, jo esam atteikuši citiem klientiem, kas būtu automašīnu paņēmuši šajā pašā periodā. "
+          },
+          {
+            "title": "Vai par auto saņemšanu/nodošanu lidostā ir jāpiemaksā?",
+            "content": "Nē, nomas automašīnas saņemšana un nodošana lidostā \"Rīga\" ir bezmaksas.\n\nPapildus jāmaksā ir, ja vēlaties saņemt auto ārpus Ambercar autonomas darba laika, kas izmaksās 40 Eur. "
+          },
+          {
+            "title": "Kas ietilpst auto nomas maksā?",
+            "content": "Automašīnas noma vēlamajā periodā,\n\nKASKO ar pašrisku atbilstoši auto markai un modelim,\n\nCiviltiesiskā apdrošināšana (OCTA),\n\nJūsu izvēlētais nobraukuma veids, \n\nPVN. "
+          },
+          {
+            "title": "Uz cik ilgu laiku tiek ieturēts drošības depozīts?",
+            "content": "Auto noma Ambercar drošības depozītu automātiski atbloķē 10 darba dienu laikā pēc iznomātā auto atgriešanas.\n\nBankā depozīta atbloķēšana var ilgt līdz 14 kalendārajām dienām. Ārzemju bankām šis process ir ilgāks. "
+          },
+          {
+            "title": "Vai iespējams norēķināties skaidrā naudā?",
+            "content": "Jā, iespējams norēķināties arī skaidrā naudā pie automašīnas saņemšanas."
+          },
+          {
+            "title": "Vai iespējams norēķināties ar karti?",
+            "content": "Jā, iespējams norēķināties ar karti gan ofisā, gan arī ārpus biroja telpām, jo izmantojam pārnēsājamo bankas termināli. "
+          },
+          {
+            "title": "Kādos gadījumos netiek atgriezta pilna drošības depozīta summa?",
+            "content": "Pilnu drošības depozīta summu var neatgriezt sekojošajos gadījumos:\n\n\nja klients izmantojis papildu pakalpojumus vai aprīkojumu un par to nav norēķinājies auto nomas periodā;\n\nja automašīna tiek atgriezta vēlāk nekā līgumā noteiktajā laikā un nomnieks par to nav norēķinājies;\n\nja atgrieztajam auto tiek konstatēti bojājumi un nomnieks nav apmaksājis izrakstīto rēķinu;\n\nja nav pilnībā uzpildīta degvielas tvertne un nomnieks nav norēķinājies par to;\n\nja ir atnācis pārkāpuma protokols un nomnieks nav apmaksājis izrakstīto rēķinu."
+          }
+        ]
+      },
+      {
+        "title": "Noderīga informācija",
+        "topics": [
+          {
+            "title": "Kur atstāt nomas auto pie lidostas?",
+            "content": "Ambecar autonomas automašīnas bezmaksas var atstāt lidostas \"Rīga\" stāvvietā \"Park Smart\" jebkurā diennakts laikā. "
+          },
+          {
+            "title": "Vai iespējams noīrēt bērnu sēdeklīšus?",
+            "content": "Jā, iznomājam arī papildus auto aprīkojumu, tajā skaitā bērnu sēdeklīšus un paliktņus atbilstoši vecumam.\n\nLai mēs šo sēdeklīti vai paliktnīti nodrošinātu, par to laicīgi jāinformē mūsu darbinieki - pievieno papildpakalpojumu savai online rezervācijai vai zvani mums! "
+          }
+        ]
+      }
+    ]
   }
 }

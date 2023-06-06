@@ -20,6 +20,8 @@
         ></app-combobox>
       </div>
       <app-date-time
+        [customTillDate]="catalog.till"
+        [customFromDate]="catalog.from"
         [placeholder]=" 'filters.receiveDateTime' | translate "
         (dateChanged)="dateChanged( $event ); currentSettings.dateUpdated = true; emitChanges()"
       ></app-date-time>

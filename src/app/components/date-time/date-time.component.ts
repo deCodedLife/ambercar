@@ -1,10 +1,11 @@
-import {Component, EventEmitter, Inject, Input, Output} from '@angular/core';
+import {Component, EventEmitter, Inject, Input, OnInit, Output} from '@angular/core';
 import {MatDatepickerInputEvent} from "@angular/material/datepicker";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {TranslateService} from "@ngx-translate/core";
 import {DateAdapter, MAT_DATE_LOCALE} from "@angular/material/core";
 import {ConfigsService} from "../../services/configs.service";
 import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
+import {coerceNumberProperty} from "@angular/cdk/coercion";
 
 export class Time {
   hours: number
@@ -16,7 +17,7 @@ export class Time {
   templateUrl: './date-time.component.html',
   styleUrls: ['./date-time.component.scss']
 })
-export class DateTimeComponent {
+export class DateTimeComponent implements OnInit {
 
   constructor(
     private snackBar: MatSnackBar,
@@ -33,10 +34,35 @@ export class DateTimeComponent {
 
     this.minDate = new Date( new Date().setDate( new Date().getDate() + 1 ) )
     this.adapter.setLocale( configs.currentLanguage )
+    this.from.minutes = Math.max( this.from.minutes - this.from.minutes % 10, 10 )
+    this.till.minutes = Math.max( this.till.minutes - this.till.minutes % 10, 10 )
   }
+
+  ngOnInit() {
+
+    if ( this.customFromDate == null || this.customTillDate == null ) return
+
+    this.value.get( "start" ).setValue( this.customFromDate )
+    this.value.get( "end" ).setValue( this.customTillDate )
+
+    this.till = {
+      hours: this.customTillDate.getHours(),
+      minutes: this.customTillDate.getMinutes()
+    }
+    this.from = {
+      hours: this.customFromDate.getHours(),
+      minutes: this.customFromDate.getMinutes()
+    }
+  }
+
+  @Input() customTillDate: Date = null
+  @Input() customFromDate: Date = null
 
   @Input() placeholder: string
   @Output() dateChanged = new EventEmitter<object>()
+
+  incorrectData: string = "Laiks ievadīts nepareizi"
+  @Input() isWrapped: boolean = false
 
   minDate: Date = new Date( new Date().setDate( new Date().getDate() + 1 ) )
 
@@ -48,9 +74,18 @@ export class DateTimeComponent {
   from: Time = { hours: (this.value.get( "start" ).value as Date).getHours(), minutes: (this.value.get( "start" ).value as Date).getMinutes() }
   till: Time = { hours: (this.value.get( "end" ).value as Date).getHours(), minutes: (this.value.get( "end" ).value as Date).getMinutes() }
 
+  getTimeFormatted( number ) {
+    if ( number <= 10 ) return 10
+    return number - ( number % 10 )
+  }
 
-  incorrectData: string = "Laiks ievadīts nepareizi"
-  @Input() isWrapped: boolean = false
+  setFromMinutes() {
+    this.from.minutes = Math.max( this.till.minutes - ( this.till.minutes % 10 ), 10 )
+  }
+
+  setTillMinutes() {
+    this.till.minutes = Math.max( this.till.minutes - ( this.till.minutes % 10 ), 10 )
+  }
 
   observeData() {
     this.translate.get( "all.incorrectTime" ).subscribe( d => this.incorrectData = d )

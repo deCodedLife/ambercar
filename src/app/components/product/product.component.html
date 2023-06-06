@@ -1,6 +1,8 @@
 <div id="shell">
   <div id="product">
-    <img class="rounded" [src]="'https://img.schedulebull.com/' + productDetails.mainImage + '&x=300&y=250'" alt="car">
+    <a [routerLink]="'/product/' + (isForSale ? 'ransom' : 'rent') + '/' + productDetails.id">
+      <img class="rounded" [src]="'https://img.schedulebull.com/' + productDetails.mainImage + '&x=300&y=250'" alt="car">
+    </a>
     <app-button
       class="h2"
       [link]="'/product/' + (isForSale ? 'ransom' : 'rent') + '/' + productDetails.id"

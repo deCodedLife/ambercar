@@ -76,6 +76,12 @@ export class CatalogComponent {
     if ( periodStart == null ) periodStart = new Date()
     if ( periodEnd == null ) periodEnd = new Date( new Date().setDate( new Date().getDate() + 1) )
 
+    periodStart = this.dateFormatted( periodStart )
+    periodEnd = this.dateFormatted( periodEnd )
+
+    this.catalog.from = periodStart
+    this.catalog.till = periodEnd
+
     this.api.getCars(
       "carsToRent",
       {
@@ -90,6 +96,12 @@ export class CatalogComponent {
 
   }
 
+  dateFormatted( d: Date ) {
+    let minutes = d.getMinutes()
+    d.setMinutes( Math.max( minutes - ( minutes % 10 ), 10 ) )
+    return d
+  }
+
   constructor(
     private api: ThirdPartyApiService,
     private configs: CatalogService,
@@ -97,18 +109,20 @@ export class CatalogComponent {
     private catalog: CatalogService
   ) {
     route.paramMap.subscribe( map => {
-      this.isForSale = map.get("type") != "rent"
+      this.isForSale = map.get( "type" ) != "rent"
       this.applyFilters( this.currentFilter )
     } )
 
     let from = new Date( new Date().setDate( new Date().getDate() + 1 ) )
     let till = new Date( new Date().setDate( new Date().getDate() + 3 ) )
+    from = this.dateFormatted( from )
+    till = this.dateFormatted( till )
 
     if ( catalog.from != null && catalog.till != null ) {
+      console.log( catalog.from )
+      console.log( catalog.till )
       from = catalog.from
       till = catalog.till
-      catalog.from = null
-      catalog.till = null
     }
 
     this.getByDate( from, till )

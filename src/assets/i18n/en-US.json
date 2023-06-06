@@ -249,5 +249,15 @@
     "tillDate": "Return date",
     "car": "Car",
     "payment": "Payment"
+  },
+  "faq": {
+    "sections": [
+      "Car reservation",
+      "Car rental",
+      "Safety",
+      "The forbidden and the permitted",
+      "Payment for car rental",
+      "Useful information"
+    ]
   }
 }

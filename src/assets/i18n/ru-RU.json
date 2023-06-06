@@ -249,5 +249,44 @@
     "tillDate": "Дата возврата",
     "car": "Автомобиль",
     "payment": "Оплата"
+  },
+  "faq": {
+    "sections": [
+      {
+        "title": "",
+        "topics": [
+          {
+            "title": "Rezervācijas apmaksas modeļi",
+            "content": "Auto noma Ambercar piedāvā divus rezervācijas apmaksas modeļus:\n\n\t1. Jūs varat rezervēt automašīnu, bet, ja neveicat rēķina apmaksu, mēs garantējam tikai vēlamo auto klasi, bet ne konkrētu modeli.\n\t2. Jūs varat rezervēt automašīnu, veikt 100% rēķina apmaksu un mēs Jums garantēsim konkrēto automašīnas modeli!\n\nAplūko Ambercar pieejamos īstermiņa nomas auto!"
+          },
+          {
+            "title": "Kā var zināt, ka rezervācija ir veikta?",
+            "content": "Ja Jūs būsiet veicis rezervāciju tiešsaistē mūsu mājas lapā, pirmkārt, pēc gala rezervācijas apstiprināšanas atvērsies \"Paldies!\" lapa, kas informēs Jūs par veikto un apstiprināto rezervāciju.\nOtrkārt, Jūs, norādītajā e-pastā saņemsiet rēķinu par autonomas pakalpojumiem.\nTreškārt, e-pastā saņemsiet ziņojumu no auto nomas Ambercar menedžera par rezervācijas apstiprinājumu vai atteikumu."
+          },
+          {
+            "title": "Vai iespējams nomainīt rezervētā nomas auto klasi?",
+            "content": "Jā, Ambercar autonomas birojā ir iespējams apmainīt auto klasi uz zemāku vai augstāku.\nJā, Ambercar autonomas birojā ir iespējams apmainīt auto klasi uz zemāku vai augstāku.\nIevērojiet, ka tarifs var mainīties un kopējās izmaksas palielināties!"
+          },
+          {
+            "title": "Vai Ambercar auto nomai ir birojs lidostā Rīga?",
+            "content": "Nē, pagaidām lidostā \"Rīga\" nav Ambercar autonomas biroja.\nJa nepieciešams, mēs automašīnu piegādājam lidostā Rīga bezmaksas. \nArī atgiezt automašīnu ir iespējams lidostas stāvvietā \"Park Smart\" bezmaksas. "
+          },
+          {
+            "title": "Vai iespējams veikt rezervāciju mājaslapā?",
+            "content": "Jā, protams! Tas ir ātri, ērti un droši! \n\nRezervē, veic apmaksu mājaslapā un saņem 10% atlaidi auto nomas pakalpojumiem!"
+          }
+        ]
+      },
+      {
+
+      },
+      "Бронирование автомобиля",
+      "Прокат автомобилей",
+      "Безопасность",
+      "Запрещенное и разрешенное",
+      "Оплата аренды автомобиля",
+      "Полезная информация"
+    ]
+
   }
 }

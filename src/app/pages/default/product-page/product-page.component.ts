@@ -10,6 +10,7 @@ import {ConfigsService} from "../../../services/configs.service";
 import {ProductServiceService} from "../../../services/product-service.service";
 import {IUser} from "../../../services/interfaces/user-interface";
 import {AuthService} from "../../../services/auth.service";
+import {CatalogService} from "../../../services/catalog.service";
 
 @Component({
   selector: 'app-product-page',
@@ -144,12 +145,18 @@ export class ProductPageComponent {
     this.totalPrice = price
   }
 
+  dateFormatted( d: Date ) {
+    let minutes = d.getMinutes()
+    d.setMinutes( Math.max( minutes - ( minutes % 10 ), 10 ) )
+    return d
+  }
+
   checkAvailable() {
     if ( this.isForSale ) return
     this.api.isAvailable( {
       "model": this.productDetails.model_id,
-      "from": this.from ?? new Date(),
-      "till": this.till ?? new Date(new Date().setDate( new Date().getDate() + 3 ))
+      "from": this.from ?? this.dateFormatted( new Date() ),
+      "till": this.till ?? this.dateFormatted( new Date(new Date().setDate( new Date().getDate() + 3 )) )
     } ).subscribe( response => {
       this.valid = Object.keys(response.data).filter( item => response.data[ item ] == 0 ).length == 0
       if ( !this.valid ) {
@@ -163,6 +170,14 @@ export class ProductPageComponent {
     this.snackBar.open( this.unavailable, null, { duration: 3000 } )
   }
 
+  getBaseInfo() {
+    this.api.getCars( "carsToRent", { carID: this.productID } ).subscribe( response => {
+      if ( typeof ((response[0] as Car)) == "undefined" ) return
+      this.productDetails = response[0]
+      this.updateImages()
+      this.calculatePrice()
+    } )
+  }
 
 
    loadData( update: boolean = false ) {
@@ -223,14 +238,19 @@ export class ProductPageComponent {
     private translate: TranslateService,
     private configs: ConfigsService,
     private product: ProductServiceService,
-    private authService: AuthService
+    private authService: AuthService,
+    public catalog: CatalogService
   ) {
     this.isForSale = (route.snapshot.paramMap.get( "type" ) ?? "") == "ransom"
     this.productID = route.snapshot.paramMap.get( 'id' )
     if ( product.selectedCar != null ) {
       this.productDetails = product.selectedCar
     }
-    this.loadData( true )
+    if ( catalog.from != null && catalog.till != null ) {
+      this.from = catalog.from
+      this.till = catalog.till
+    }
+    this.getBaseInfo()
 
     this.translate.onLangChange.subscribe( _ => this.observeData() )
     this.observeData()

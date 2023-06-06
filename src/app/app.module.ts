@@ -66,6 +66,7 @@ import { UniversalComponent } from './pages/default/universal/universal.componen
 import { ReviewsComponent } from './components/reviews/reviews.component';
 import { UserDataComponent } from './pages/default/user-data/user-data.component';
 import { OrganizationComponent } from './pages/default/organization/organization.component';
+import { FAQComponent } from './pages/default/faq/faq.component';
 
 @NgModule({
     declarations: [
@@ -110,7 +111,8 @@ import { OrganizationComponent } from './pages/default/organization/organization
         UniversalComponent,
         ReviewsComponent,
         UserDataComponent,
-        OrganizationComponent
+        OrganizationComponent,
+        FAQComponent
     ],
     imports: [
         BrowserModule,

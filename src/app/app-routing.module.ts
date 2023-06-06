@@ -13,6 +13,7 @@ import {SettingsComponent} from "./pages/admin/settings/settings.component";
 import {PageComponent} from "./pages/admin/page/page.component";
 import {AddPageComponent} from "./pages/admin/add-page/add-page.component";
 import {UniversalComponent} from "./pages/default/universal/universal.component";
+import {FAQComponent} from "./pages/default/faq/faq.component";
 
 const routes: Routes = [
 
@@ -64,6 +65,10 @@ const routes: Routes = [
   {
     path: "admin/newPage",
     component: AddPageComponent
+  },
+  {
+    path: "faq",
+    component: FAQComponent
   },
   {
     path: ':page',

@@ -1,5 +1,4 @@
 import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
-import {ThirdPartyApiService} from "../../../services/third-party-api.service";
 import {Car} from "../../../services/interfaces/car-interface";
 import {ConfigsService} from "../../../services/configs.service";
 import {Router} from "@angular/router";
@@ -14,9 +13,8 @@ import {CatalogService} from "../../../services/catalog.service";
 export class HomeComponent implements AfterViewInit {
 
   @ViewChild( "reviews" ) reviews: ElementRef
-  // @ViewChild( "reviews" ) Greviews: ElementRef
 
-  popularCarID: number[] = [ 2815, 836, 827, 2893, 3616, 3079, 1605, 2926 ]
+  popularCarID: number[] = []
   brands: string[] = []
 
   carList: Car[] = []
@@ -31,10 +29,19 @@ export class HomeComponent implements AfterViewInit {
     this.router.navigateByUrl('/catalog/rent')
   }
 
+  getRandomCar() {
+    let car = this.configs.carsToRent[ Math.floor( Math.random() * this.configs.carsToRent.length - 1 ) ]
+    if ( this.popularCarID.filter( item => item == car.id ).length != 0 ) {
+      car = this.getRandomCar()
+    }
+    this.popularCarID.push( car.id )
+    return car
+  }
+
   updatePopularList() {
-    this.popularCarID.forEach( carID => {
-      this.carList.push( this.configs.getCarDetails( carID ) )
-    } )
+    for ( let i = 0; i < 8; i++ ) {
+      this.carList.push( this.getRandomCar() )
+    }
   }
 
   constructor(

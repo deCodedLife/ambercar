@@ -14,7 +14,7 @@ export class FiltersComponent {
 
   constructor(
     private configs: ConfigsService,
-    private catalog: CatalogService
+    public catalog: CatalogService
   ) {
   }
 
